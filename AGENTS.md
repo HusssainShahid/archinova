@@ -63,10 +63,25 @@ itself an open question (Q3) — do not "fix" one to match the other.
 `wa.me/44XXXXXXXXXX` appear sitewide via `apply-shell.mjs`. The markup is complete; the
 number is fake so it cannot ship unnoticed (Q1). Don't invent one.
 
-**Forms have no backend.** `js/main.js` → `initEnquiryForms()` handles any element with
-`data-enquiry-form`, builds a `mailto:` and assigns it to `window.location.href`. Two forms
-use it: Contact, and "Request a Quote" on About. Consequence: file uploads are silently
-discarded (`mailto:` cannot carry attachments) and webmail users see nothing happen (Q2).
+**Forms post to Web3Forms, and the access key is a deliberate placeholder.** `js/main.js` →
+`initEnquiryForms()` handles any element with `data-enquiry-form`. Two forms use it: Contact,
+and "Request a Quote" on About. While `WEB3FORMS_KEY` still starts `REPLACE-WITH`, both fall
+back to the old `mailto:` behaviour, so the site is never worse than before but also cannot
+post into a void. The key is tied to the inbox that receives the mail, which is why only the
+client can supply it (Q2). Don't invent one, and don't delete the fallback.
+
+**Neither form takes file attachments, on purpose.** Both offer a `fileLink` URL field
+instead. Every free-and-cheap form service caps uploads at 25MB per submission at best, and
+the DWG files and plan-set PDFs this business receives routinely exceed that, so a share
+link beats a paid upload box. `verify.mjs` fails on any `type="file"` — a file input here
+would collect a drawing and silently drop it.
+
+**Card and process layouts are CSS grids, not Bootstrap rows.** `.process-grid` for numbered
+process steps, `.service-card-grid` for the richer "What We Offer" cards. Never put a
+`col-*` div inside either — outside a `.row` a Bootstrap column only contributes gutter
+padding, and the grid's own column count silently wins, which is how the Planning and Party
+Wall cards once ended up a quarter of their intended width. `verify.mjs` guards both this
+and the mirror mistake of bare `.process-box` children in a `.row`.
 
 **Image filenames are URL-safe lowercase hyphenated.** No spaces, ampersands or capitals
 anywhere under `assets/images` — the originals had all three. Keep new files to that

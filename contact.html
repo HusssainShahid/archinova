@@ -120,6 +120,7 @@
             <p class="text-muted mb-4">Complete the enquiry form below and our team will review your requirements before providing a tailored quotation. You can also email drawings, photographs, sketches, or site plans to help us quote accurately.</p>
 
             <form id="enquiry-form" class="needs-validation" data-enquiry-form novalidate>
+              <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
               <h3 class="h6 text-royal text-uppercase fw-bold letter-spacing mb-3">Your Details</h3>
               <div class="row g-3 mb-4">
                 <div class="col-md-6">
@@ -176,9 +177,9 @@
                   <div class="invalid-feedback">Please describe your project.</div>
                 </div>
                 <div class="col-12">
-                  <label class="form-label" for="fileUpload">Upload Files (optional)</label>
-                  <input type="file" class="form-control" id="fileUpload" name="fileUpload" multiple accept=".pdf,.jpg,.jpeg,.png,.dwg,.doc,.docx">
-                  <div class="form-text">Drawings, photos, sketches, or supporting documents. Please attach these files to the email that opens when you submit.</div>
+                  <label class="form-label" for="fileLink">Link to Drawings or Documents (optional)</label>
+                  <input type="url" class="form-control" id="fileLink" name="fileLink" placeholder="https://">
+                  <div class="form-text">Paste a Dropbox, Google Drive or WeTransfer link to any drawings, photos, sketches or site plans. You can also email them to <a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a>.</div>
                 </div>
               </div>
 

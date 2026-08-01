@@ -51,6 +51,18 @@ const assertions = [
   ["architectural labelled Architectural Design", (h) => h.includes(">Architectural Design<")],
   ["no legacy step-num markup", (h) => !h.includes('class="step-num"')],
   ["no image-coming-soon placeholder", (h) => !h.includes("Image coming soon")],
+  // A Bootstrap column is meaningless outside a .row: as a CSS grid item it only
+  // adds gutter padding, and the grid's own column count silently wins.
+  ["no Bootstrap column inside a CSS grid",
+    (h) => !/class="(?:process-grid|service-card-grid)[^"]*">\s*<div class="col-/.test(h)],
+  // The mirror mistake: process boxes in a .row have no column wrapper, so they
+  // fall back to one full-width box per line.
+  ["process boxes laid out by the CSS grid, not a Bootstrap row",
+    (h) => !/<div class="row[^"]*">\s*<div class="process-box/.test(h)],
+  // Nothing carries an attachment to Web3Forms or through mailto:, so a file
+  // input would collect a drawing and silently drop it.
+  ["no file input that would be silently discarded", (h) => !h.includes('type="file"')],
+  ["no stale attach-to-email instruction", (h) => !h.includes("attach these files to the email")],
 ];
 
 let failures = 0;
@@ -80,6 +92,8 @@ const perPage = [
   ["about.html", "expertise panel with 7 tiles", (h) => (h.match(/expertise-tile/g) ?? []).length === 7],
   ["about.html", "FAQ with 6 questions", (h) => (h.match(/accordion-item/g) ?? []).length === 6],
   ["about.html", "request a quote form", (h) => h.includes("Request Your Free Quote")],
+  ["about.html", "enquiry form has a honeypot", (h) => h.includes('name="botcheck"')],
+  ["about.html", "file-link field replaces the upload box", (h) => h.includes('name="fileLink"')],
   ["about.html", "industries section removed", (h) => !h.includes("Industries We Serve")],
   ["about.html", "ready-to-work CTA removed", (h) => !h.includes("Ready to Work With Us")],
   ["contact.html", "contact panel", (h) => h.includes("contact-panel")],
@@ -87,6 +101,8 @@ const perPage = [
   ["contact.html", "hero logo", (h) => h.includes("logo-white-with-name.png")],
   ["contact.html", "office hours formatted", (h) => h.includes("office-hours")],
   ["contact.html", "areas we cover removed", (h) => !h.includes("areas-text")],
+  ["contact.html", "enquiry form has a honeypot", (h) => h.includes('name="botcheck"')],
+  ["contact.html", "file-link field replaces the upload box", (h) => h.includes('name="fileLink"')],
   ["services/architectural.html", "ticker banner", (h) => h.includes("ticker-band")],
   ["services/architectural.html", "benefits panel", (h) => h.includes("benefits-panel")],
   ["services/architectural.html", "5 process hover backgrounds", (h) => (h.match(/--step-bg/g) ?? []).length === 5],

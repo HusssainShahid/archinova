@@ -218,6 +218,7 @@
             </div>
 
             <form class="needs-validation" data-enquiry-form novalidate>
+              <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
               <div class="row g-3 mb-3">
                 <div class="col-md-6">
                   <label class="form-label" for="qFullName">Full Name *</label>
@@ -256,9 +257,9 @@
                   <div class="invalid-feedback">Please describe your project.</div>
                 </div>
                 <div class="col-12">
-                  <label class="form-label" for="qFiles">Upload Drawings or Documents (Optional)</label>
-                  <input type="file" class="form-control" id="qFiles" name="attachments" multiple accept=".pdf,.jpg,.jpeg,.png,.dwg,.doc,.docx">
-                  <div class="form-text">Please attach these files to the email that opens when you submit.</div>
+                  <label class="form-label" for="qFileLink">Link to Drawings or Documents (Optional)</label>
+                  <input type="url" class="form-control" id="qFileLink" name="fileLink" placeholder="https://">
+                  <div class="form-text">Paste a Dropbox, Google Drive or WeTransfer link, or email your files to <a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a>.</div>
                 </div>
               </div>
 

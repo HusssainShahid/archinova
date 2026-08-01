@@ -42,23 +42,46 @@ Please provide:
 
 ---
 
-### Q2 — Where should enquiries actually be delivered? · NEEDS ANSWER
+### Q2 — Which inbox should receive enquiries? · NEEDS ANSWER
 
-Both forms currently open the visitor's own email application with a pre-filled draft.
-Nothing is sent to a server. That means:
+Both forms previously opened the visitor's own email application with a pre-filled draft,
+which meant the enquiry only arrived if the visitor pressed Send themselves, and anyone
+using webmail in a browser tab (Gmail, Outlook.com) saw nothing happen at all.
 
-- the enquiry only arrives if the visitor clicks Send themselves;
-- the "Upload Drawings or Documents" file is **discarded** — the `mailto:` scheme cannot
-  carry attachments at all;
-- it does nothing for anyone using webmail in a browser tab (Gmail, Outlook.com), so a
-  significant share of visitors will click submit and see no result.
+Both forms now submit directly to **Web3Forms**, a free relay that emails each submission
+to a nominated inbox. Its free tier covers 250 submissions a month across both forms, which
+is comfortably more than this site should generate. The code is finished and tested — the
+only thing missing is the access key, which is tied to the inbox that receives the mail.
 
-To fix all three the form needs to post to a form service. Free tiers that handle file
-uploads and need no backend: Formspree, Web3Forms, EmailJS. Roughly a 20-line change once
-chosen.
+**We need from you:**
 
-- Keep the current email-app behaviour, accepting that attachments and webmail users fail?
-- Or set up a form service — and if so, which inbox receives submissions?
+- The inbox submissions should go to (`info@archinovastructures.co.uk`, or another address):
+- Create a free key at `web3forms.com` using that address and send us the key. It takes
+  about a minute — they email it to you immediately, no account or card needed.
+
+Until the key is supplied the forms fall back to the old email-application behaviour, so
+nothing is worse than before, but the key is a deliberate placeholder so it cannot ship
+unnoticed.
+
+**On file uploads — a correction to what we told you previously.** An earlier version of
+this question said Formspree, Web3Forms and EmailJS offer file uploads on their free tiers.
+That was wrong: all three charge for uploads ($15, $12 and $9 a month respectively).
+
+More importantly, paying would not solve the problem. Every one of these services caps
+uploads at 25MB per submission at best, and the drawings you actually want to receive —
+DWG files and full plan-set PDFs — routinely exceed that. So we have replaced the upload
+box on both forms with a **"Link to Drawings or Documents"** field, alongside the existing
+invitation to email files across. A Dropbox, Google Drive or WeTransfer link carries a
+60MB drawing set that no paid tier here would accept, and costs nothing.
+
+Tell us if you would rather we fitted a real upload box despite the size limit.
+
+**One consequence to be aware of.** Enquiries will now pass through Web3Forms, whose servers
+are in the United States, and the Privacy Policy currently names no third party at all — it
+says only that "we take appropriate measures". Under UK GDPR it should name the processor.
+We have not edited it, because the legal pages are your own supplied wording and we do not
+change those without asking. Confirm you are happy for us to add a sentence, or send us the
+wording you want.
 
 **Answer:**
 
