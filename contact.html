@@ -11,23 +11,25 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/logo/logo-blue-mark.png">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">ARCHINOVA<span>Structures Ltd</span></a>
+      <a class="navbar-brand" href="index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
+        <img src="assets/images/logo/logo-blue-mark.png" alt="ARCHINOVA STRUCTURES LTD">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html" data-nav="home">Home</a></li>
+        <ul class="navbar-nav mx-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="about.html" data-nav="about">About</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="services/architectural.html" data-nav="architectural.html">Architectural</a></li>
-              <li><a class="dropdown-item" href="services/structural.html" data-nav="structural.html">Structural</a></li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="services/architectural.html" data-nav="architectural.html">Architectural Design</a></li>
+              <li><a class="dropdown-item" href="services/structural.html" data-nav="structural.html">Structural Engineering</a></li>
               <li><a class="dropdown-item" href="services/planning.html" data-nav="planning.html">Planning &amp; Building Control</a></li>
               <li><a class="dropdown-item" href="services/party-wall.html" data-nav="party-wall.html">Party Wall &amp; Boundary</a></li>
               <li><a class="dropdown-item" href="services/surveys.html" data-nav="surveys.html">Surveys &amp; Inspections</a></li>
@@ -41,59 +43,75 @@
 
   <header class="page-hero page-hero--sm" style="background-image: linear-gradient(120deg, #0b1f3a 0%, #1e5aa8 100%);">
     <div class="container py-5">
-      <p class="hero-eyebrow">Contact</p>
-      <h1>Get in Touch</h1>
-      <p class="hero-text">Whether you're planning a home extension, loft conversion, structural alteration, new build, or commercial development, the team at ARCHINOVA STRUCTURES LTD is here to help.</p>
+      <div class="row align-items-center g-4">
+        <div class="col-lg-4 text-center text-lg-start">
+          <img class="hero-logo" src="assets/images/logo/logo-white-with-name.png" alt="ARCHINOVA STRUCTURES LTD">
+        </div>
+        <div class="col-lg-8">
+          <p class="hero-eyebrow">Contact</p>
+          <h1>Get in Touch</h1>
+          <p class="hero-text mb-0">Whether you're planning a home extension, loft conversion, structural alteration, new build, or commercial development, the team at ARCHINOVA STRUCTURES LTD is here to help.</p>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="section-pad">
     <div class="container">
-      <div class="row g-5">
+      <div class="row g-4">
         <div class="col-lg-5">
-          <span class="section-eyebrow">Reach Us</span>
-          <h2 class="section-title">Contact Information</h2>
-          <p class="mb-4">From your initial enquiry through to project completion, our experienced team is available to offer expert guidance, practical advice, and reliable support.</p>
-          <ul class="contact-info-list">
-            <li>
-              <span class="ci-icon"><i class="bi bi-envelope"></i></span>
-              <div>
-                <strong>Email</strong>
-                <a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a>
-              </div>
-            </li>
-            <li>
-              <span class="ci-icon"><i class="bi bi-telephone"></i></span>
-              <div>
-                <strong>Telephone</strong>
-                <span>+44 XX XXXX XXXX</span>
-              </div>
-            </li>
-            <li>
-              <span class="ci-icon"><i class="bi bi-whatsapp"></i></span>
-              <div>
-                <strong>WhatsApp</strong>
-                <span>+44 XX XXXX XXXX</span>
-              </div>
-            </li>
-            <li>
-              <span class="ci-icon"><i class="bi bi-clock"></i></span>
-              <div>
-                <strong>Office Hours</strong>
-                <span>Mon–Fri 9:00 AM – 6:00 PM<br>Saturday 9:00 AM – 2:00 PM<br>Sunday Closed</span>
-              </div>
-            </li>
-          </ul>
+          <div class="contact-panel">
+            <span class="section-eyebrow">Reach Us</span>
+            <h2 class="section-title text-navy">Contact Information</h2>
 
-          <h3 class="h5 text-navy fw-bold mt-4 mb-3">Why Contact Us?</h3>
-          <ul class="check-list">
-            <li><i class="bi bi-check-circle-fill"></i> Free Initial Consultation</li>
-            <li><i class="bi bi-check-circle-fill"></i> Tailored Project Quotations</li>
-            <li><i class="bi bi-check-circle-fill"></i> Professional Architectural &amp; Structural Advice</li>
-            <li><i class="bi bi-check-circle-fill"></i> Residential &amp; Commercial Expertise</li>
-            <li><i class="bi bi-check-circle-fill"></i> Fast Response Times</li>
-            <li><i class="bi bi-check-circle-fill"></i> Friendly &amp; Reliable Support</li>
-          </ul>
+            <h3 class="h5 text-navy fw-bold mt-4 mb-2">Let's Discuss Your Project</h3>
+            <p class="mb-4">Whether you're planning an extension, loft conversion, structural assessment, commercial development, or Party Wall matter, our experienced team is ready to provide expert advice and practical engineering solutions tailored to your project.</p>
+
+            <div class="contact-card-grid">
+              <div class="contact-card">
+                <span class="cc-icon"><i class="bi bi-envelope"></i></span>
+                <div>
+                  <span class="cc-label">Email</span>
+                  <span class="cc-value"><a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a></span>
+                </div>
+              </div>
+              <div class="contact-card">
+                <span class="cc-icon"><i class="bi bi-telephone"></i></span>
+                <div>
+                  <span class="cc-label">Telephone</span>
+                  <span class="cc-value"><a href="tel:+44XXXXXXXXXX">+44 XX XXXX XXXX</a></span>
+                </div>
+              </div>
+              <div class="contact-card">
+                <span class="cc-icon"><i class="bi bi-whatsapp"></i></span>
+                <div>
+                  <span class="cc-label">WhatsApp</span>
+                  <span class="cc-value"><a href="https://wa.me/44XXXXXXXXXX" target="_blank" rel="noopener">+44 XX XXXX XXXX</a></span>
+                </div>
+              </div>
+              <div class="contact-card">
+                <span class="cc-icon"><i class="bi bi-clock"></i></span>
+                <div>
+                  <span class="cc-label">Office Hours</span>
+                  <ul class="office-hours">
+                    <li><span class="oh-day">Monday – Friday</span> <span class="oh-time">9:00 AM – 6:00 PM</span></li>
+                    <li><span class="oh-day">Saturday</span> <span class="oh-time">9:00 AM – 2:00 PM</span></li>
+                    <li><span class="oh-day">Sunday</span> <span class="oh-time">Closed</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="h5 text-navy fw-bold mt-4 mb-3">Why Contact Us?</h3>
+            <ul class="check-list">
+              <li><i class="bi bi-check-circle-fill"></i> Free Initial Consultation</li>
+              <li><i class="bi bi-check-circle-fill"></i> Tailored Project Quotations</li>
+              <li><i class="bi bi-check-circle-fill"></i> Professional Architectural &amp; Structural Advice</li>
+              <li><i class="bi bi-check-circle-fill"></i> Residential &amp; Commercial Expertise</li>
+              <li><i class="bi bi-check-circle-fill"></i> Fast Response Times</li>
+              <li><i class="bi bi-check-circle-fill"></i> Friendly &amp; Reliable Support</li>
+            </ul>
+          </div>
         </div>
 
         <div class="col-lg-7">
@@ -101,7 +119,7 @@
             <h2 class="h4 text-navy fw-bold mb-2">Request a Free Quote</h2>
             <p class="text-muted mb-4">Complete the enquiry form below and our team will review your requirements before providing a tailored quotation. You can also email drawings, photographs, sketches, or site plans to help us quote accurately.</p>
 
-            <form id="enquiry-form" class="needs-validation" novalidate>
+            <form id="enquiry-form" class="needs-validation" data-enquiry-form novalidate>
               <h3 class="h6 text-royal text-uppercase fw-bold letter-spacing mb-3">Your Details</h3>
               <div class="row g-3 mb-4">
                 <div class="col-md-6">
@@ -160,7 +178,7 @@
                 <div class="col-12">
                   <label class="form-label" for="fileUpload">Upload Files (optional)</label>
                   <input type="file" class="form-control" id="fileUpload" name="fileUpload" multiple accept=".pdf,.jpg,.jpeg,.png,.dwg,.doc,.docx">
-                  <div class="form-text">Drawings, photos, sketches, or supporting documents. File upload is for your reference — please attach files in the email that opens after submit.</div>
+                  <div class="form-text">Drawings, photos, sketches, or supporting documents. Please attach these files to the email that opens when you submit.</div>
                 </div>
               </div>
 
@@ -181,21 +199,11 @@
               </div>
 
               <button type="submit" class="btn btn-primary-brand">Request My Free Quote</button>
-              <div id="form-feedback" class="form-feedback-msg" role="status" aria-live="polite"></div>
             </form>
+            <div id="form-feedback" class="form-feedback-msg" role="status" aria-live="polite"></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section-pad bg-off">
-    <div class="container">
-      <span class="section-eyebrow">Coverage</span>
-      <h2 class="section-title">Areas We Cover</h2>
-      <p class="mb-3">ARCHINOVA STRUCTURES LTD proudly provides architectural and structural engineering services throughout <strong>England</strong>.</p>
-      <p class="areas-text mb-3">We regularly support residential and commercial projects in: London • Birmingham • Manchester • Liverpool • Leeds • Sheffield • Nottingham • Leicester • Bristol • Coventry • Milton Keynes • Reading • Oxford • Cambridge • Southampton • Derby • Newcastle upon Tyne • Northampton • Luton • Peterborough • York • Hull • Stoke-on-Trent • Wolverhampton • Norwich • Exeter • Plymouth • Chelmsford • Colchester • Ipswich</p>
-      <p class="mb-0 text-muted">If your location isn't listed, please don't hesitate to contact us. We are happy to discuss projects throughout England and will be pleased to advise how we can assist.</p>
     </div>
   </section>
 
@@ -204,7 +212,6 @@
       <div class="row g-4">
         <div class="col-md-4">
           <div class="footer-brand">ARCHINOVA STRUCTURES LTD</div>
-          <p>Registered in England &amp; Wales<br>Company Registration No. 17343941</p>
           <p class="mb-0">Registered Office:<br>128 City Road,<br>London, EC1V 2NX,<br>United Kingdom</p>
         </div>
         <div class="col-6 col-md-2">
@@ -218,27 +225,29 @@
         <div class="col-6 col-md-3">
           <h4>Services</h4>
           <ul>
-            <li><a href="services/architectural.html">Architectural</a></li>
-            <li><a href="services/structural.html">Structural</a></li>
+            <li><a href="services/architectural.html">Architectural Design</a></li>
+            <li><a href="services/structural.html">Structural Engineering</a></li>
             <li><a href="services/planning.html">Planning &amp; Building Control</a></li>
             <li><a href="services/party-wall.html">Party Wall &amp; Boundary</a></li>
             <li><a href="services/surveys.html">Surveys &amp; Inspections</a></li>
           </ul>
         </div>
         <div class="col-md-3">
-          <h4>Contact</h4>
+          <h4>Get In Touch</h4>
           <ul>
             <li><a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a></li>
-            <li>Phone: +44 XX XXXX XXXX</li>
-            <li>WhatsApp: +44 XX XXXX XXXX</li>
+            <li>Phone: <a href="tel:+44XXXXXXXXXX">+44 XX XXXX XXXX</a></li>
+            <li>WhatsApp: <a href="https://wa.me/44XXXXXXXXXX" target="_blank" rel="noopener">+44 XX XXXX XXXX</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; ARCHINOVA STRUCTURES LTD. All Rights Reserved.</span>
+        <span>&copy; 2026 ARCHINOVA STRUCTURES LTD. All Rights Reserved.
+          <span class="footer-legalese">Registered in England &amp; Wales | Company No. 17343941</span>
+        </span>
         <div class="footer-legal">
           <a href="privacy.html">Privacy Policy</a>
-          <a href="privacy.html#cookies">Cookie Policy</a>
+          <a href="cookies.html">Cookie Policy</a>
           <a href="terms.html">Terms &amp; Conditions</a>
         </div>
       </div>

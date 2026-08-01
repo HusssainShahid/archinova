@@ -1,14 +1,15 @@
 # ARCHINOVA STRUCTURES LTD — Website
 
-Static marketing website for ARCHINOVA STRUCTURES LTD (architectural & structural engineering services).
+Static marketing website for ARCHINOVA STRUCTURES LTD (architectural & structural
+engineering services). No framework, no build step, no backend — the folder is the
+deployable artefact.
 
 ## Stack
 
-- HTML5
-- Bootstrap 5.3 (CDN)
-- Bootstrap Icons
+- HTML5, one file per page
+- Bootstrap 5.3 + Bootstrap Icons (CDN)
 - Custom CSS (`css/styles.css`) — white backgrounds, navy & royal blue brand colours
-- Vanilla JS (`js/main.js`) — active nav + contact form validation / mailto
+- Vanilla JS (`js/main.js`) — active-nav highlight + enquiry form validation/`mailto:`
 
 ## Pages
 
@@ -17,26 +18,61 @@ Static marketing website for ARCHINOVA STRUCTURES LTD (architectural & structura
 | Home | `index.html` |
 | About | `about.html` |
 | Contact | `contact.html` |
-| Architectural | `services/architectural.html` |
-| Structural | `services/structural.html` |
+| Architectural Design | `services/architectural.html` |
+| Structural Engineering | `services/structural.html` |
 | Planning & Building Control | `services/planning.html` |
 | Party Wall & Boundary | `services/party-wall.html` |
 | Surveys & Inspections | `services/surveys.html` |
-| Privacy / Cookies | `privacy.html` |
-| Terms | `terms.html` |
+| Privacy Policy | `privacy.html` |
+| Cookie Policy | `cookies.html` |
+| Terms & Conditions | `terms.html` |
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the folder:
+Open `index.html` directly, or serve the folder:
 
 ```bash
-npx serve .
+npx http-server . -p 8080
 ```
 
-## Notes
+## Working on it
 
-- Phone / WhatsApp numbers are placeholders (`+44 XX XXXX XXXX`).
-- About page uses content from the Home brief (About US source doc was a Party Wall duplicate).
-- Missing images use branded “Image coming soon” placeholders (e.g. House Extensions).
-- Contact form opens a pre-filled `mailto:` to `info@archinovastructures.co.uk` (no server backend).
-- Privacy and Terms are stubs pending legal review.
+**The navbar and footer are generated, not hand-written.** They appear on all 11 pages;
+edit `tools/apply-shell.mjs` and re-run it rather than editing the copies:
+
+```bash
+node tools/apply-shell.mjs
+```
+
+**Verify after every change.** This resolves every local `href`/`src` and asserts the
+current design is intact. It should always end in `0 broken references, 0 failed
+assertions`:
+
+```bash
+node tools/verify.mjs
+```
+
+See `tools/README.md` for the rest, including which scripts are spent one-shots that must
+not be re-run.
+
+## Project docs
+
+| File | Purpose |
+|------|---------|
+| `v2.md` | The client's v2 revision brief, verbatim. Source of truth for what was asked. |
+| `V2-CHECKLIST.md` | Every requirement in `v2.md` as a row, with `Done` / `Tested` status and evidence. Rows are permanent — never deleted, reworded or renumbered. |
+| `V2-QUESTIONS.md` | The 8 open questions that genuinely need a client answer. Question numbers are permanent; the checklist cross-references them. |
+| `requirements/` | Original client-supplied source documents and images. Not linked from the site. |
+
+## Known gaps
+
+- **Phone and WhatsApp numbers are deliberate placeholders** (`+44 XX XXXX XXXX`,
+  `tel:+44XXXXXXXXXX`, `wa.me/44XXXXXXXXXX`). The markup is finished; only the number is
+  missing. Blocks launch — see `V2-QUESTIONS.md` Q1.
+- **Enquiries are not sent anywhere.** Both forms (Contact, and "Request a Quote" on About)
+  open the visitor's own email client with a pre-filled draft to
+  `info@archinovastructures.co.uk`. Nothing reaches a server, the visitor must press Send
+  themselves, and the "Upload Drawings or Documents" file is silently discarded because
+  `mailto:` cannot carry attachments. Webmail users see nothing happen. Needs a form
+  service — see `V2-QUESTIONS.md` Q2.
+- Privacy, Cookie and Terms copy is the client's own supplied wording, used as given.

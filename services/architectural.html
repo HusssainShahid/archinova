@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Architectural Services | ARCHINOVA STRUCTURES LTD</title>
-  <meta name="description" content="Professional architectural design services across England & Wales — planning drawings, Building Regulations, extensions, lofts, and more.">
+  <title>Architectural Design | ARCHINOVA STRUCTURES LTD</title>
+  <meta name="description" content="Professional architectural design services across England — planning drawings, Building Regulations, extensions, lofts, and more.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="../css/styles.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/images/logo/logo-blue-mark.png">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="../index.html">ARCHINOVA<span>Structures Ltd</span></a>
+      <a class="navbar-brand" href="../index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
+        <img src="../assets/images/logo/logo-blue-mark.png" alt="ARCHINOVA STRUCTURES LTD">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="../index.html" data-nav="home">Home</a></li>
+        <ul class="navbar-nav mx-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="../about.html" data-nav="about">About</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="architectural.html" data-nav="architectural.html">Architectural</a></li>
-              <li><a class="dropdown-item" href="structural.html" data-nav="structural.html">Structural</a></li>
-              <li><a class="dropdown-item" href="planning.html" data-nav="planning.html">Planning &amp; Building Control</a></li>
-              <li><a class="dropdown-item" href="party-wall.html" data-nav="party-wall.html">Party Wall &amp; Boundary</a></li>
-              <li><a class="dropdown-item" href="surveys.html" data-nav="surveys.html">Surveys &amp; Inspections</a></li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../services/architectural.html" data-nav="architectural.html">Architectural Design</a></li>
+              <li><a class="dropdown-item" href="../services/structural.html" data-nav="structural.html">Structural Engineering</a></li>
+              <li><a class="dropdown-item" href="../services/planning.html" data-nav="planning.html">Planning &amp; Building Control</a></li>
+              <li><a class="dropdown-item" href="../services/party-wall.html" data-nav="party-wall.html">Party Wall &amp; Boundary</a></li>
+              <li><a class="dropdown-item" href="../services/surveys.html" data-nav="surveys.html">Surveys &amp; Inspections</a></li>
             </ul>
           </li>
           <li class="nav-item ms-lg-2"><a class="btn btn-primary-brand btn-sm px-3" href="../contact.html" data-nav="contact">Contact</a></li>
@@ -39,10 +41,10 @@
     </div>
   </nav>
 
-  <header class="page-hero page-hero--sm" style="background-image: url('../assets/images/architectural/hero-bg.jpg');">
+  <header class="page-hero page-hero--sm page-hero--showcase" style="background-image: url('../assets/images/architectural/hero-bg.jpg');">
     <div class="container py-5">
       <p class="hero-eyebrow">Architectural Services</p>
-      <h1>Professional Architectural Design Services Across England &amp; Wales</h1>
+      <h1>Professional Architectural Design Services</h1>
       <p class="hero-text">Comprehensive architectural design for homeowners, developers, landlords, builders, and commercial clients — from concept through to planning and Building Regulations drawings.</p>
       <div class="hero-ctas">
         <a href="../contact.html" class="btn btn-primary-brand">Request a Free Consultation</a>
@@ -50,9 +52,10 @@
     </div>
   </header>
 
-  <section class="section-pad">
-    <div class="container">
-      <p class="section-lead mb-0">Whether you are extending your home, converting a loft, building a new property, or renovating an existing building, our experienced design team delivers practical, innovative, and regulation-compliant architectural solutions tailored to your project.</p>
+  <section class="ticker-band" aria-label="Service summary">
+    <div class="ticker-viewport">
+      <div class="ticker-track"><span>Whether you are extending your home, converting a loft, building a new property, or renovating an existing building, our experienced design team delivers practical, innovative, and regulation-compliant architectural solutions tailored to your project.</span></div>
+      <div class="ticker-track" aria-hidden="true"><span>Whether you are extending your home, converting a loft, building a new property, or renovating an existing building, our experienced design team delivers practical, innovative, and regulation-compliant architectural solutions tailored to your project.</span></div>
     </div>
   </section>
 
@@ -60,7 +63,7 @@
     <div class="container">
       <div class="text-center mb-4 pt-5">
         <span class="section-eyebrow">What We Offer</span>
-        <h2 class="section-title">Our Architectural Services</h2>
+        <h2 class="section-title section-title--lg">Our Architectural Services</h2>
       </div>
 
       <article class="service-block">
@@ -89,11 +92,7 @@
           <p>Whether you're planning a rear extension, side extension, wraparound extension, or double-storey extension, we design spaces that maximise your property's potential while maintaining functionality and aesthetics.</p>
         </div>
         <div class="service-block-media">
-          <div class="img-placeholder">
-            <i class="bi bi-image"></i>
-            <span>Image coming soon</span>
-            <small>House Extensions</small>
-          </div>
+          <img src="../assets/images/architectural/extension.png" alt="House extensions">
         </div>
       </article>
 
@@ -146,11 +145,11 @@
         <h2 class="section-title">Why Choose ARCHINOVA STRUCTURES LTD?</h2>
       </div>
       <div class="row g-4">
-        <div class="col-md-6 col-lg-4"><div class="why-item"><div class="why-icon"><i class="bi bi-pencil-square"></i></div><h3>Experienced Design Team</h3><p>Our architectural professionals combine creativity with technical expertise to deliver practical and efficient design solutions.</p></div></div>
-        <div class="col-md-6 col-lg-4"><div class="why-item"><div class="why-icon"><i class="bi bi-house-heart"></i></div><h3>Tailored Designs</h3><p>Every property is unique. We create bespoke designs that reflect your objectives, budget, and lifestyle.</p></div></div>
-        <div class="col-md-6 col-lg-4"><div class="why-item"><div class="why-icon"><i class="bi bi-shield-check"></i></div><h3>UK Building Regulations Compliance</h3><p>All drawings are prepared with careful consideration of current UK Building Regulations and planning requirements.</p></div></div>
-        <div class="col-md-6 col-lg-4"><div class="why-item"><div class="why-icon"><i class="bi bi-chat-dots"></i></div><h3>Clear Communication</h3><p>We keep you informed throughout every stage of the design process, ensuring transparency and confidence from concept to completion.</p></div></div>
-        <div class="col-md-6 col-lg-4"><div class="why-item"><div class="why-icon"><i class="bi bi-speedometer2"></i></div><h3>Efficient Project Delivery</h3><p>Our streamlined workflow enables us to deliver high-quality drawings within agreed timescales.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="why-item why-box"><div class="why-icon"><i class="bi bi-pencil-square"></i></div><h3>Experienced Design Team</h3><p>Our architectural professionals combine creativity with technical expertise to deliver practical and efficient design solutions.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="why-item why-box"><div class="why-icon"><i class="bi bi-house-heart"></i></div><h3>Tailored Designs</h3><p>Every property is unique. We create bespoke designs that reflect your objectives, budget, and lifestyle.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="why-item why-box"><div class="why-icon"><i class="bi bi-shield-check"></i></div><h3>UK Building Regulations Compliance</h3><p>All drawings are prepared with careful consideration of current UK Building Regulations and planning requirements.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="why-item why-box"><div class="why-icon"><i class="bi bi-chat-dots"></i></div><h3>Clear Communication</h3><p>We keep you informed throughout every stage of the design process, ensuring transparency and confidence from concept to completion.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="why-item why-box"><div class="why-icon"><i class="bi bi-speedometer2"></i></div><h3>Efficient Project Delivery</h3><p>Our streamlined workflow enables us to deliver high-quality drawings within agreed timescales.</p></div></div>
       </div>
     </div>
   </section>
@@ -161,12 +160,70 @@
         <span class="section-eyebrow">Process</span>
         <h2 class="section-title">Our Design Process</h2>
       </div>
-      <div class="process-steps">
-        <div class="process-step"><span class="step-num">1</span><h3>Initial Consultation</h3><p>We begin by understanding your project objectives, requirements, and budget.</p></div>
-        <div class="process-step"><span class="step-num">2</span><h3>Site Assessment</h3><p>Our team reviews the available property information and project constraints.</p></div>
-        <div class="process-step"><span class="step-num">3</span><h3>Concept Design</h3><p>Initial design proposals are prepared to explore the most effective layout and appearance.</p></div>
-        <div class="process-step"><span class="step-num">4</span><h3>Detailed Drawings</h3><p>Planning drawings and technical documentation are developed to support applications and construction.</p></div>
-        <div class="process-step"><span class="step-num">5</span><h3>Final Delivery</h3><p>Completed drawing packages are issued for submission to authorities and construction professionals.</p></div>
+      <div class="process-grid process-grid--5">
+        <div class="process-box process-box--media" style="--step-bg: url('../assets/images/architectural/consultation.png');">
+          <span class="process-badge">
+            <span class="badge-num">1</span>
+            <span class="badge-logo"><img src="../assets/images/logo/logo-white-mark.png" alt=""></span>
+          </span>
+          <h3>Initial Consultation</h3>
+          <p>We begin by understanding your project objectives, requirements, and budget.</p>
+        </div>
+        <div class="process-box process-box--media" style="--step-bg: url('../assets/images/architectural/on-site.png');">
+          <span class="process-badge">
+            <span class="badge-num">2</span>
+            <span class="badge-logo"><img src="../assets/images/logo/logo-white-mark.png" alt=""></span>
+          </span>
+          <h3>Site Assessment</h3>
+          <p>Our team reviews the available property information and project constraints.</p>
+        </div>
+        <div class="process-box process-box--media" style="--step-bg: url('../assets/images/architectural/concept-design.png');">
+          <span class="process-badge">
+            <span class="badge-num">3</span>
+            <span class="badge-logo"><img src="../assets/images/logo/logo-white-mark.png" alt=""></span>
+          </span>
+          <h3>Concept Design</h3>
+          <p>Initial design proposals are prepared to explore the most effective layout and appearance.</p>
+        </div>
+        <div class="process-box process-box--media" style="--step-bg: url('../assets/images/architectural/drawings.png');">
+          <span class="process-badge">
+            <span class="badge-num">4</span>
+            <span class="badge-logo"><img src="../assets/images/logo/logo-white-mark.png" alt=""></span>
+          </span>
+          <h3>Detailed Drawings</h3>
+          <p>Planning drawings and technical documentation are developed to support applications and construction.</p>
+        </div>
+        <div class="process-box process-box--media" style="--step-bg: url('../assets/images/architectural/delivery.png');">
+          <span class="process-badge">
+            <span class="badge-num">5</span>
+            <span class="badge-logo"><img src="../assets/images/logo/logo-white-mark.png" alt=""></span>
+          </span>
+          <h3>Final Delivery</h3>
+          <p>Completed drawing packages are issued for submission to authorities and construction professionals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="benefits-panel benefits-panel--light" style="background-image: url('../assets/images/architectural/benefits-bg.png');">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-5">
+            <h2>Benefits of Working With ARCHINOVA STRUCTURES</h2>
+          </div>
+          <div class="col-lg-7">
+            <p class="mb-4">From concept to completion, we provide reliable architectural solutions backed by technical excellence, clear communication, and professional support.</p>
+            <ul class="benefit-list">
+            <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-rulers benefit-icon"></i> Tailored Design</li>
+            <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-clipboard-check benefit-icon"></i> Planning Support</li>
+            <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-buildings benefit-icon"></i> Technical Expertise</li>
+            <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-shield-check benefit-icon"></i> Regulation Compliance</li>
+            <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-people benefit-icon"></i> Client Focus</li>
+            <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-clock-history benefit-icon"></i> Reliable Delivery</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -215,7 +272,6 @@
       <div class="row g-4">
         <div class="col-md-4">
           <div class="footer-brand">ARCHINOVA STRUCTURES LTD</div>
-          <p>Registered in England &amp; Wales<br>Company Registration No. 17343941</p>
           <p class="mb-0">Registered Office:<br>128 City Road,<br>London, EC1V 2NX,<br>United Kingdom</p>
         </div>
         <div class="col-6 col-md-2">
@@ -229,27 +285,29 @@
         <div class="col-6 col-md-3">
           <h4>Services</h4>
           <ul>
-            <li><a href="architectural.html">Architectural</a></li>
-            <li><a href="structural.html">Structural</a></li>
-            <li><a href="planning.html">Planning &amp; Building Control</a></li>
-            <li><a href="party-wall.html">Party Wall &amp; Boundary</a></li>
-            <li><a href="surveys.html">Surveys &amp; Inspections</a></li>
+            <li><a href="../services/architectural.html">Architectural Design</a></li>
+            <li><a href="../services/structural.html">Structural Engineering</a></li>
+            <li><a href="../services/planning.html">Planning &amp; Building Control</a></li>
+            <li><a href="../services/party-wall.html">Party Wall &amp; Boundary</a></li>
+            <li><a href="../services/surveys.html">Surveys &amp; Inspections</a></li>
           </ul>
         </div>
         <div class="col-md-3">
-          <h4>Contact</h4>
+          <h4>Get In Touch</h4>
           <ul>
             <li><a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a></li>
-            <li>Phone: +44 XX XXXX XXXX</li>
-            <li>WhatsApp: +44 XX XXXX XXXX</li>
+            <li>Phone: <a href="tel:+44XXXXXXXXXX">+44 XX XXXX XXXX</a></li>
+            <li>WhatsApp: <a href="https://wa.me/44XXXXXXXXXX" target="_blank" rel="noopener">+44 XX XXXX XXXX</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; ARCHINOVA STRUCTURES LTD. All Rights Reserved.</span>
+        <span>&copy; 2026 ARCHINOVA STRUCTURES LTD. All Rights Reserved.
+          <span class="footer-legalese">Registered in England &amp; Wales | Company No. 17343941</span>
+        </span>
         <div class="footer-legal">
           <a href="../privacy.html">Privacy Policy</a>
-          <a href="../privacy.html#cookies">Cookie Policy</a>
+          <a href="../cookies.html">Cookie Policy</a>
           <a href="../terms.html">Terms &amp; Conditions</a>
         </div>
       </div>

@@ -4,30 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | ARCHINOVA STRUCTURES LTD</title>
-  <meta name="description" content="Learn about ARCHINOVA STRUCTURES LTD — professional architectural and structural engineering services across England & Wales.">
+  <meta name="description" content="Learn about ARCHINOVA STRUCTURES LTD — professional architectural and structural engineering services across England.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/logo/logo-blue-mark.png">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">ARCHINOVA<span>Structures Ltd</span></a>
+      <a class="navbar-brand" href="index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
+        <img src="assets/images/logo/logo-blue-mark.png" alt="ARCHINOVA STRUCTURES LTD">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html" data-nav="home">Home</a></li>
+        <ul class="navbar-nav mx-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="about.html" data-nav="about">About</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="services/architectural.html" data-nav="architectural.html">Architectural</a></li>
-              <li><a class="dropdown-item" href="services/structural.html" data-nav="structural.html">Structural</a></li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="services/architectural.html" data-nav="architectural.html">Architectural Design</a></li>
+              <li><a class="dropdown-item" href="services/structural.html" data-nav="structural.html">Structural Engineering</a></li>
               <li><a class="dropdown-item" href="services/planning.html" data-nav="planning.html">Planning &amp; Building Control</a></li>
               <li><a class="dropdown-item" href="services/party-wall.html" data-nav="party-wall.html">Party Wall &amp; Boundary</a></li>
               <li><a class="dropdown-item" href="services/surveys.html" data-nav="surveys.html">Surveys &amp; Inspections</a></li>
@@ -39,27 +41,127 @@
     </div>
   </nav>
 
-  <header class="page-hero page-hero--sm" style="background-image: url('assets/images/home/hero-banner.jpg');">
+  <header class="page-hero page-hero--sm" style="background-image: url('assets/images/about/hero-banner.png');">
     <div class="container py-5">
-      <p class="hero-eyebrow">About Us</p>
+      <p class="hero-eyebrow">Who We Are</p>
       <h1>About ARCHINOVA STRUCTURES LTD</h1>
-      <p class="hero-text">Technical expertise combined with practical design solutions for residential and commercial projects across England &amp; Wales.</p>
+      <p class="hero-text">We help bring building projects to life through professional architectural and structural engineering services. Whether you're planning a new build, extension, renovation, or commercial development, we're here to provide practical, reliable, and compliant solutions every step of the way.</p>
     </div>
   </header>
 
   <section class="section-pad">
     <div class="container">
-      <div class="row g-4 g-lg-5 align-items-center">
-        <div class="col-lg-7">
-          <span class="section-eyebrow">Who We Are</span>
-          <h2 class="section-title">Professional Architectural &amp; Structural Engineering</h2>
-          <p>At ARCHINOVA STRUCTURES LTD, we are committed to delivering professional architectural and structural engineering services that combine technical expertise with practical design solutions.</p>
-          <p>We work with homeowners, property developers, builders, and commercial clients to produce high-quality drawings, structural calculations, and construction documentation that comply with current UK Building Regulations and industry standards.</p>
-          <p class="mb-0">From the initial concept through to project completion, we aim to provide reliable advice, efficient project management, and outstanding customer service.</p>
+      <div class="mission-panel" style="background-image: url('assets/images/about/our-mission.png');">
+        <span class="section-eyebrow">Building Trust Through Quality and Innovation</span>
+        <h2 class="section-title">OUR MISSION</h2>
+        <p>Our mission is to deliver high-quality architectural and structural engineering services with professionalism, precision, and care. We strive to build lasting client relationships and become a trusted consultancy known for reliable solutions, technical excellence, and projects that stand the test of time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-off">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-eyebrow">Our Process</span>
+        <h2 class="section-title">From Concept to Completion</h2>
+      </div>
+      <div class="process-timeline">
+        <div class="timeline-row">
+          <div class="timeline-card">
+            <h3>Consultation</h3>
+            <p>We listen to your ideas, understand your needs, and define the scope of your project.</p>
+          </div>
+          <span class="timeline-marker">01</span>
+          <div class="timeline-media">
+            <img src="assets/images/about/consultation.png" alt="Initial project consultation">
+          </div>
         </div>
-        <div class="col-lg-5">
-          <div class="service-block-media" style="aspect-ratio: 4/5;">
-            <img src="assets/images/structural/hero-bg.png" alt="Structural engineering work">
+        <div class="timeline-row">
+          <div class="timeline-media">
+            <img src="assets/images/about/site-project-review.png" alt="Site and project review">
+          </div>
+          <span class="timeline-marker">02</span>
+          <div class="timeline-card">
+            <h3>Site &amp; Project Review</h3>
+            <p>We review your property, objectives, and technical requirements before any design work begins.</p>
+          </div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-card">
+            <h3>Design &amp; Engineering</h3>
+            <p>Our architects and engineers create practical, innovative, and compliant design solutions.</p>
+          </div>
+          <span class="timeline-marker">03</span>
+          <div class="timeline-media">
+            <img src="assets/images/about/design-engineering.png" alt="Design and engineering">
+          </div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-media">
+            <img src="assets/images/about/planning-approval.png" alt="Planning approval">
+          </div>
+          <span class="timeline-marker">04</span>
+          <div class="timeline-card">
+            <h3>Planning Approval</h3>
+            <p>We prepare all drawings and calculations and handle the necessary checks to support smooth approvals.</p>
+          </div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-card">
+            <h3>Project Delivery</h3>
+            <p>Final documentation is issued to support your construction project from first fix to handover.</p>
+          </div>
+          <span class="timeline-marker">05</span>
+          <div class="timeline-media">
+            <img src="assets/images/about/project-delivery.png" alt="Project delivery">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="expertise-panel">
+        <div class="expertise-panel-head" style="background-image: url('assets/images/about/expertise-bg.png');">
+          <span class="section-eyebrow">Our Expertise</span>
+          <h3>Expert Solutions for Every Stage of Your Project</h3>
+        </div>
+        <div class="expertise-grid">
+          <div class="expertise-tile">
+            <img src="assets/images/about/home-extension-logo.png" alt="">
+            <h4>Home Extensions</h4>
+            <p>Beautifully designed extensions that add space and value.</p>
+          </div>
+          <div class="expertise-tile">
+            <img src="assets/images/about/loft-conversion-logo.png" alt="">
+            <h4>Loft Conversions</h4>
+            <p>Transform your loft into a functional living space.</p>
+          </div>
+          <div class="expertise-tile">
+            <img src="assets/images/about/new-builds.png" alt="">
+            <h4>New Builds</h4>
+            <p>Complete design and structural solutions for new homes.</p>
+          </div>
+          <div class="expertise-tile">
+            <img src="assets/images/about/structural-alter.png" alt="">
+            <h4>Structural Alterations</h4>
+            <p>Safe and efficient structural changes to existing buildings.</p>
+          </div>
+          <div class="expertise-tile">
+            <img src="assets/images/about/planning-consult.png" alt="">
+            <h4>Planning Consultations</h4>
+            <p>Expert preparation and submission of planning applications.</p>
+          </div>
+          <div class="expertise-tile">
+            <img src="assets/images/about/party-wall.png" alt="">
+            <h4>Party Wall Matters</h4>
+            <p>Party wall notices, agreements and surveyor services.</p>
+          </div>
+          <div class="expertise-tile">
+            <img src="assets/images/about/boundary-disp.png" alt="">
+            <h4>Boundary Disputes</h4>
+            <p>Expert advice and solutions for boundary disputes.</p>
           </div>
         </div>
       </div>
@@ -68,53 +170,38 @@
 
   <section class="section-pad bg-off">
     <div class="container">
-      <div class="text-center mb-5">
-        <span class="section-eyebrow">Why Us</span>
-        <h2 class="section-title">Why Choose ARCHINOVA STRUCTURES LTD?</h2>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4"><div class="why-item"><div class="why-icon"><i class="bi bi-award"></i></div><h3>Professional Expertise</h3><p>Our experienced design team delivers practical engineering and architectural solutions for projects of every size.</p></div></div>
-        <div class="col-md-6 col-lg-4"><div class="why-item"><div class="why-icon"><i class="bi bi-shield-check"></i></div><h3>Building Regulations Compliance</h3><p>Every project is prepared with careful consideration of current UK Building Regulations and relevant design standards.</p></div></div>
-        <div class="col-md-6 col-lg-4"><div class="why-item"><div class="why-icon"><i class="bi bi-chat-dots"></i></div><h3>Clear Communication</h3><p>We believe every client deserves transparent advice, prompt responses, and regular project updates from start to finish.</p></div></div>
-        <div class="col-md-6 col-lg-4"><div class="why-item"><div class="why-icon"><i class="bi bi-lightning-charge"></i></div><h3>Efficient Turnaround</h3><p>We understand the importance of meeting project deadlines and strive to deliver our services efficiently without compromising quality.</p></div></div>
-        <div class="col-md-6 col-lg-4"><div class="why-item"><div class="why-icon"><i class="bi bi-sliders"></i></div><h3>Tailored Solutions</h3><p>Every property is different. We provide design solutions that suit your individual requirements, budget, and objectives.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-pad">
-    <div class="container">
-      <div class="text-center mb-5">
-        <span class="section-eyebrow">How We Work</span>
-        <h2 class="section-title">Our Process</h2>
-      </div>
-      <div class="process-steps">
-        <div class="process-step"><span class="step-num">1</span><h3>Initial Consultation</h3><p>Discuss your project requirements with our team.</p></div>
-        <div class="process-step"><span class="step-num">2</span><h3>Project Assessment</h3><p>We review your property, objectives, and technical requirements.</p></div>
-        <div class="process-step"><span class="step-num">3</span><h3>Design &amp; Engineering</h3><p>Our specialists prepare architectural drawings and structural calculations.</p></div>
-        <div class="process-step"><span class="step-num">4</span><h3>Planning &amp; Compliance</h3><p>Where required, we assist with planning submissions and Building Regulations documentation.</p></div>
-        <div class="process-step"><span class="step-num">5</span><h3>Project Delivery</h3><p>Final documentation is issued to support your construction project.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-pad bg-off">
-    <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-5">
-          <span class="section-eyebrow">Who We Help</span>
-          <h2 class="section-title">Industries We Serve</h2>
-          <p class="section-lead mb-0">Supporting clients across residential and commercial property projects throughout England &amp; Wales.</p>
-        </div>
-        <div class="col-lg-7">
-          <ul class="industry-list">
-            <li>Homeowners</li>
-            <li>Property Developers</li>
-            <li>Builders &amp; Contractors</li>
-            <li>Commercial Property Owners</li>
-            <li>Landlords</li>
-            <li>Investors</li>
-          </ul>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="text-center mb-4">
+            <span class="section-eyebrow">FAQ</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+          </div>
+          <div class="accordion faq-accordion" id="faqAbout">
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ab1">What does ARCHINOVA STRUCTURES LTD specialise in?</button></h3>
+              <div id="ab1" class="accordion-collapse collapse show" data-bs-parent="#faqAbout"><div class="accordion-body">ARCHINOVA STRUCTURES LTD specialises in architectural design and structural engineering services for residential and commercial projects. We deliver practical, compliant, and innovative solutions tailored to each client's requirements.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ab2">Who do you work with?</button></h3>
+              <div id="ab2" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">We work with homeowners, property developers, builders, landlords, commercial clients, and property investors across England, providing professional support throughout every stage of their project.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ab3">What makes ARCHINOVA STRUCTURES LTD different?</button></h3>
+              <div id="ab3" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">We combine architectural creativity with technical engineering expertise to deliver practical, buildable, and regulation-compliant solutions. Our focus is on quality, professionalism, and building long-term client relationships.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ab4">Can you support a project from start to finish?</button></h3>
+              <div id="ab4" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">Yes. From the initial consultation and design stage through planning applications, structural engineering, and technical documentation, we provide comprehensive support to help keep your project on track.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ab5">How do you ensure the quality of your work?</button></h3>
+              <div id="ab5" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">Every project is completed with careful attention to detail, current UK Building Regulations, and recognised engineering standards. We are committed to delivering accurate, reliable, and professional solutions.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ab6">How can I get started?</button></h3>
+              <div id="ab6" class="accordion-collapse collapse" data-bs-parent="#faqAbout"><div class="accordion-body">Simply contact our team through our website or request a free quotation. We'll discuss your project requirements, answer your questions, and recommend the most suitable next steps.</div></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -122,37 +209,81 @@
 
   <section class="section-pad">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="why-item">
-            <div class="why-icon"><i class="bi bi-building"></i></div>
-            <h3>Company Details</h3>
-            <p>ARCHINOVA STRUCTURES LTD<br>Registered in England &amp; Wales<br>Company No. 17343941</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="why-item">
-            <div class="why-icon"><i class="bi bi-geo-alt"></i></div>
-            <h3>Registered Office</h3>
-            <p>128 City Road,<br>London, EC1V 2NX,<br>United Kingdom</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="why-item">
-            <div class="why-icon"><i class="bi bi-envelope"></i></div>
-            <h3>Get in Touch</h3>
-            <p><a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a></p>
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="panel-box" id="request-a-quote">
+            <div class="text-center mb-4">
+              <h2 class="section-title mb-2">Request a Quote</h2>
+              <p class="section-lead mx-auto mb-0">Complete the enquiry form below and one of our team members will get back to you as soon as possible.</p>
+            </div>
+
+            <form class="needs-validation" data-enquiry-form novalidate>
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="qFullName">Full Name *</label>
+                  <input type="text" class="form-control" id="qFullName" name="fullName" required>
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="qEmail">Email Address *</label>
+                  <input type="email" class="form-control" id="qEmail" name="email" required>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="qPhone">Phone Number *</label>
+                  <input type="tel" class="form-control" id="qPhone" name="telephone" required>
+                  <div class="invalid-feedback">Please enter your phone number.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="qAddress">Property Address</label>
+                  <input type="text" class="form-control" id="qAddress" name="propertyAddress">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="qService">Service Required</label>
+                  <select class="form-select" id="qService" name="serviceRequired">
+                    <option value="">Select a service</option>
+                    <option>Architectural Services</option>
+                    <option>Structural Engineering</option>
+                    <option>Planning &amp; Building Control</option>
+                    <option>Party Wall Services</option>
+                    <option>Boundary Services</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="qDetails">Project Details *</label>
+                  <textarea class="form-control" id="qDetails" name="projectDescription" rows="4" required></textarea>
+                  <div class="invalid-feedback">Please describe your project.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="qFiles">Upload Drawings or Documents (Optional)</label>
+                  <input type="file" class="form-control" id="qFiles" name="attachments" multiple accept=".pdf,.jpg,.jpeg,.png,.dwg,.doc,.docx">
+                  <div class="form-text">Please attach these files to the email that opens when you submit.</div>
+                </div>
+              </div>
+
+              <fieldset class="mb-4">
+                <legend class="form-label">Preferred Contact Method</legend>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="preferredContact" id="qPrefPhone" value="Phone">
+                  <label class="form-check-label" for="qPrefPhone">Phone</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="preferredContact" id="qPrefEmail" value="Email" checked>
+                  <label class="form-check-label" for="qPrefEmail">Email</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="preferredContact" id="qPrefWa" value="WhatsApp">
+                  <label class="form-check-label" for="qPrefWa">WhatsApp</label>
+                </div>
+              </fieldset>
+
+              <button type="submit" class="btn btn-primary-brand">Request Your Free Quote</button>
+            </form>
+            <div class="form-feedback-msg" role="status" aria-live="polite"></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="cta-band">
-    <div class="container">
-      <h2>Ready to Work With Us?</h2>
-      <p>Contact ARCHINOVA STRUCTURES LTD today to discuss your project and receive a tailored quotation.</p>
-      <a href="contact.html" class="btn btn-outline-brand">Request a Free Consultation</a>
     </div>
   </section>
 
@@ -161,7 +292,6 @@
       <div class="row g-4">
         <div class="col-md-4">
           <div class="footer-brand">ARCHINOVA STRUCTURES LTD</div>
-          <p>Registered in England &amp; Wales<br>Company Registration No. 17343941</p>
           <p class="mb-0">Registered Office:<br>128 City Road,<br>London, EC1V 2NX,<br>United Kingdom</p>
         </div>
         <div class="col-6 col-md-2">
@@ -175,27 +305,29 @@
         <div class="col-6 col-md-3">
           <h4>Services</h4>
           <ul>
-            <li><a href="services/architectural.html">Architectural</a></li>
-            <li><a href="services/structural.html">Structural</a></li>
+            <li><a href="services/architectural.html">Architectural Design</a></li>
+            <li><a href="services/structural.html">Structural Engineering</a></li>
             <li><a href="services/planning.html">Planning &amp; Building Control</a></li>
             <li><a href="services/party-wall.html">Party Wall &amp; Boundary</a></li>
             <li><a href="services/surveys.html">Surveys &amp; Inspections</a></li>
           </ul>
         </div>
         <div class="col-md-3">
-          <h4>Contact</h4>
+          <h4>Get In Touch</h4>
           <ul>
             <li><a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a></li>
-            <li>Phone: +44 XX XXXX XXXX</li>
-            <li>WhatsApp: +44 XX XXXX XXXX</li>
+            <li>Phone: <a href="tel:+44XXXXXXXXXX">+44 XX XXXX XXXX</a></li>
+            <li>WhatsApp: <a href="https://wa.me/44XXXXXXXXXX" target="_blank" rel="noopener">+44 XX XXXX XXXX</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; ARCHINOVA STRUCTURES LTD. All Rights Reserved.</span>
+        <span>&copy; 2026 ARCHINOVA STRUCTURES LTD. All Rights Reserved.
+          <span class="footer-legalese">Registered in England &amp; Wales | Company No. 17343941</span>
+        </span>
         <div class="footer-legal">
           <a href="privacy.html">Privacy Policy</a>
-          <a href="privacy.html#cookies">Cookie Policy</a>
+          <a href="cookies.html">Cookie Policy</a>
           <a href="terms.html">Terms &amp; Conditions</a>
         </div>
       </div>

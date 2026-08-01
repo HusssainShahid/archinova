@@ -11,9 +11,7 @@
       if (!target) return;
 
       var isActive = false;
-      if (target === "home" && (file === "index.html" || file === "")) {
-        isActive = true;
-      } else if (target === "about" && file === "about.html") {
+      if (target === "about" && file === "about.html") {
         isActive = true;
       } else if (target === "contact" && file === "contact.html") {
         isActive = true;
@@ -32,67 +30,87 @@
     });
   }
 
-  function initContactForm() {
-    var form = document.getElementById("enquiry-form");
-    if (!form) return;
+  // Fields are read by name and skipped when absent, so the Contact and About
+  // forms can carry different sets of inputs without diverging code paths.
+  var FIELD_LABELS = [
+    ["fullName", "Full Name"],
+    ["email", "Email"],
+    ["telephone", "Telephone"],
+    ["serviceRequired", "Service Required"],
+    ["propertyType", "Property Type"],
+    ["propertyAddress", "Property Address"],
+    ["preferredContact", "Preferred Contact"],
+    ["projectDescription", "Project Details"]
+  ];
 
-    var feedback = document.getElementById("form-feedback");
+  function readField(form, name) {
+    var radios = form.querySelectorAll('input[name="' + name + '"]');
+    if (radios.length && radios[0].type === "radio") {
+      var picked = form.querySelector('input[name="' + name + '"]:checked');
+      return picked ? picked.value : "";
+    }
+    var el = form.querySelector('[name="' + name + '"]');
+    return el ? String(el.value).trim() : null;
+  }
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  function initEnquiryForms() {
+    document.querySelectorAll("form[data-enquiry-form]").forEach(function (form) {
+      var feedback = form.parentElement.querySelector(".form-feedback-msg");
 
-      if (feedback) {
-        feedback.className = "form-feedback-msg";
-        feedback.textContent = "";
-      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-      if (!form.checkValidity()) {
-        form.classList.add("was-validated");
         if (feedback) {
-          feedback.className = "form-feedback-msg is-error";
-          feedback.textContent = "Please complete all required fields correctly.";
+          feedback.className = "form-feedback-msg";
+          feedback.textContent = "";
         }
-        return;
-      }
 
-      var name = form.querySelector('[name="fullName"]').value.trim();
-      var email = form.querySelector('[name="email"]').value.trim();
-      var phone = form.querySelector('[name="telephone"]').value.trim();
-      var service = form.querySelector('[name="serviceRequired"]').value;
-      var propertyType = form.querySelector('[name="propertyType"]').value;
-      var address = form.querySelector('[name="propertyAddress"]').value.trim();
-      var description = form.querySelector('[name="projectDescription"]').value.trim();
-      var preferred = form.querySelector('input[name="preferredContact"]:checked');
-      var preferredVal = preferred ? preferred.value : "Email";
+        if (!form.checkValidity()) {
+          form.classList.add("was-validated");
+          if (feedback) {
+            feedback.className = "form-feedback-msg is-error";
+            feedback.textContent = "Please complete all required fields correctly.";
+          }
+          return;
+        }
 
-      var subject = encodeURIComponent("Quote request from " + name);
-      var body = encodeURIComponent(
-        "Full Name: " + name + "\n" +
-        "Email: " + email + "\n" +
-        "Telephone: " + phone + "\n" +
-        "Service Required: " + service + "\n" +
-        "Property Type: " + propertyType + "\n" +
-        "Property Address: " + address + "\n" +
-        "Preferred Contact: " + preferredVal + "\n\n" +
-        "Project Description:\n" + description + "\n\n" +
-        "(Please attach any drawings or photos in your email reply.)"
-      );
+        var lines = [];
+        var description = "";
+        FIELD_LABELS.forEach(function (pair) {
+          var value = readField(form, pair[0]);
+          if (value === null || value === "") return;
+          if (pair[0] === "projectDescription") {
+            description = value;
+          } else {
+            lines.push(pair[1] + ": " + value);
+          }
+        });
 
-      window.location.href =
-        "mailto:info@archinovastructures.co.uk?subject=" + subject + "&body=" + body;
+        var name = readField(form, "fullName") || "website visitor";
+        var subject = encodeURIComponent("Quote request from " + name);
+        var body = encodeURIComponent(
+          lines.join("\n") +
+            "\n\nProject Details:\n" +
+            description +
+            "\n\n(Please attach any drawings or photos to this email before sending.)"
+        );
 
-      if (feedback) {
-        feedback.className = "form-feedback-msg is-success";
-        feedback.textContent =
-          "Opening your email client to send the enquiry. If nothing opens, email us at info@archinovastructures.co.uk.";
-      }
+        window.location.href =
+          "mailto:info@archinovastructures.co.uk?subject=" + subject + "&body=" + body;
 
-      form.classList.remove("was-validated");
+        if (feedback) {
+          feedback.className = "form-feedback-msg is-success";
+          feedback.textContent =
+            "Opening your email application to send the enquiry. If nothing opens, email us at info@archinovastructures.co.uk.";
+        }
+
+        form.classList.remove("was-validated");
+      });
     });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
     setActiveNav();
-    initContactForm();
+    initEnquiryForms();
   });
 })();
