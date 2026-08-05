@@ -4,8 +4,8 @@ Static site, 11 HTML pages, Bootstrap 5.3 via CDN. No framework, no build step, 
 Read `README.md` first for the page list and how to run it. This file covers the conventions
 that are not obvious from the code and that are easy to break.
 
-The v2 revision brief (`v2.md`) has been fully implemented. What remains is 8 open client
-questions in `V2-QUESTIONS.md`.
+The v2 revision brief (`v2.md`) has been fully implemented. What remains is the open client
+questions in `V2-QUESTIONS.md` (status `NEEDS ANSWER`).
 
 ## Before you finish any change
 
@@ -63,12 +63,12 @@ itself an open question (Q3) — do not "fix" one to match the other.
 `wa.me/44XXXXXXXXXX` appear sitewide via `apply-shell.mjs`. The markup is complete; the
 number is fake so it cannot ship unnoticed (Q1). Don't invent one.
 
-**Forms post to Web3Forms, and the access key is a deliberate placeholder.** `js/main.js` →
-`initEnquiryForms()` handles any element with `data-enquiry-form`. Two forms use it: Contact,
-and "Request a Quote" on About. While `WEB3FORMS_KEY` still starts `REPLACE-WITH`, both fall
-back to the old `mailto:` behaviour, so the site is never worse than before but also cannot
-post into a void. The key is tied to the inbox that receives the mail, which is why only the
-client can supply it (Q2). Don't invent one, and don't delete the fallback.
+**Forms post to Web3Forms.** `js/main.js` → `initEnquiryForms()` handles any element with
+`data-enquiry-form`. Two forms use it: Contact, and "Request a Quote" on About. A live
+`WEB3FORMS_KEY` is set; submissions POST to `https://api.web3forms.com/submit`. If the key
+ever starts with `REPLACE-WITH` again, both forms fall back to `mailto:` so they never post
+into a void — leave that fallback in place. The key is public by design (it only allows
+sending *to* the signup inbox); don't treat it as a secret to strip from the repo.
 
 **Neither form takes file attachments, on purpose.** Both offer a `fileLink` URL field
 instead. Every free-and-cheap form service caps uploads at 25MB per submission at best, and

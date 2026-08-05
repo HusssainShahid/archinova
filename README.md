@@ -9,7 +9,7 @@ deployable artefact.
 - HTML5, one file per page
 - Bootstrap 5.3 + Bootstrap Icons (CDN)
 - Custom CSS (`css/styles.css`) — white backgrounds, navy & royal blue brand colours
-- Vanilla JS (`js/main.js`) — active-nav highlight + enquiry form validation/`mailto:`
+- Vanilla JS (`js/main.js`) — active-nav highlight + enquiry forms via Web3Forms
 
 ## Pages
 
@@ -61,7 +61,7 @@ not be re-run.
 |------|---------|
 | `v2.md` | The client's v2 revision brief, verbatim. Source of truth for what was asked. |
 | `V2-CHECKLIST.md` | Every requirement in `v2.md` as a row, with `Done` / `Tested` status and evidence. Rows are permanent — never deleted, reworded or renumbered. |
-| `V2-QUESTIONS.md` | The 8 open questions that genuinely need a client answer. Question numbers are permanent; the checklist cross-references them. |
+| `V2-QUESTIONS.md` | Client questions that need an answer. Question numbers are permanent; the checklist cross-references them. Status is `NEEDS ANSWER` or `ANSWERED`. |
 | `requirements/` | Original client-supplied source documents and images. Not linked from the site. |
 
 ## Known gaps
@@ -69,12 +69,9 @@ not be re-run.
 - **Phone and WhatsApp numbers are deliberate placeholders** (`+44 XX XXXX XXXX`,
   `tel:+44XXXXXXXXXX`, `wa.me/44XXXXXXXXXX`). The markup is finished; only the number is
   missing. Blocks launch — see `V2-QUESTIONS.md` Q1.
-- **The Web3Forms access key is a deliberate placeholder.** Both forms (Contact, and
-  "Request a Quote" on About) post to Web3Forms, which emails each submission to the inbox
-  its access key belongs to. `WEB3FORMS_KEY` in `js/main.js` is still
-  `REPLACE-WITH-WEB3FORMS-ACCESS-KEY`; while it is, the forms deliberately fall back to
-  opening the visitor's own email client, exactly as they did before. Replacing that one
-  string is the whole switch-on. See `V2-QUESTIONS.md` Q2.
+- **Enquiry forms post to Web3Forms** (Contact, and "Request a Quote" on About). The access
+  key in `js/main.js` is live. See `V2-QUESTIONS.md` Q2 for the privacy-policy follow-up
+  (naming Web3Forms as a processor) still awaiting client wording or go-ahead.
 - **Neither form accepts file attachments.** Both offer a "Link to Drawings or Documents"
   field instead. This is deliberate: every free-and-cheap form service caps uploads at
   25MB per submission at best, and the DWG files and plan-set PDFs this business receives

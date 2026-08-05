@@ -12,17 +12,13 @@ const present = (q) => new RegExp(`${q}\\b`).test(questions);
 
 const missing = refs.filter((q) => !present(q));
 const needsAnswer = (questions.match(/· NEEDS ANSWER/g) ?? []).length;
+const answered = (questions.match(/· ANSWERED/g) ?? []).length;
 const ours = (checklist.match(/\| ≈ Ours \|/g) ?? []).length;
 
 console.log(`checklist references ${refs.length} distinct questions: ${refs.join(", ")}`);
 console.log(`dangling references (point at a question that no longer exists): ${missing.length ? missing.join(", ") : "none"}`);
 console.log(`open questions awaiting a client answer: ${needsAnswer}`);
+console.log(`answered questions: ${answered}`);
 console.log(`rows marked "≈ Ours" (our decision, no client answer needed): ${ours}`);
 
-if (refs.length !== needsAnswer) {
-  console.warn(
-    `! mismatch: ${refs.length} questions referenced but ${needsAnswer} documented`
-  );
-}
-
-process.exitCode = missing.length || refs.length !== needsAnswer ? 1 : 0;
+process.exitCode = missing.length ? 1 : 0;
