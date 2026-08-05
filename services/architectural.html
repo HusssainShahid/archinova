@@ -16,8 +16,8 @@
 <body>
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="../index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
-        <img src="../assets/images/logo/logo-blue-mark.png" alt="ARCHINOVA STRUCTURES LTD">
+      <a class="navbar-brand navbar-brand--named" href="../index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
+        <img src="../assets/images/logo/logo-blue-named-horizontal.png" alt="ARCHINOVA STRUCTURES LTD">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,8 +25,8 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav mx-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="../about.html" data-nav="about">About</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+          <li class="nav-item dropdown nav-item--hover">
+            <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Services</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../services/architectural.html" data-nav="architectural.html">Architectural Design</a></li>
               <li><a class="dropdown-item" href="../services/structural.html" data-nav="structural.html">Structural Engineering</a></li>
@@ -35,27 +35,32 @@
               <li><a class="dropdown-item" href="../services/surveys.html" data-nav="surveys.html">Surveys &amp; Inspections</a></li>
             </ul>
           </li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-primary-brand btn-sm px-3" href="../contact.html" data-nav="contact">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-primary-brand btn-nav-contact px-4" href="../contact.html" data-nav="contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="page-hero page-hero--sm page-hero--showcase" style="background-image: url('../assets/images/architectural/hero-bg.jpg');">
+  <header
+    class="page-hero page-hero--sm page-hero--showcase page-hero--tall page-hero--copy-lg"
+    data-hero-slides="../assets/images/architectural/hero-bg.jpg,../assets/images/architectural/hero-baner-1.png,../assets/images/architectural/hero-banner-2.png,../assets/images/architectural/hero-banner-3.png"
+    data-hero-dir="rtl"
+    style="background-image: url('../assets/images/architectural/hero-bg.jpg');"
+  >
     <div class="container py-5">
       <p class="hero-eyebrow">Architectural Services</p>
-      <h1>Professional Architectural Design Services</h1>
-      <p class="hero-text">Comprehensive architectural design for homeowners, developers, landlords, builders, and commercial clients — from concept through to planning and Building Regulations drawings.</p>
+      <h1 class="hero-title-blue">Professional Architectural Design Services</h1>
+      <p class="hero-text hero-text--lg anim-from-center">Comprehensive architectural design for homeowners, developers, landlords, builders, and commercial clients — from concept through to planning and Building Regulations drawings.</p>
       <div class="hero-ctas">
-        <a href="../contact.html" class="btn btn-primary-brand">Request a Free Consultation</a>
+        <a href="../contact.html" class="btn btn-sky">Request a Free Consultation</a>
       </div>
     </div>
   </header>
 
-  <section class="ticker-band" aria-label="Service summary">
+  <section class="ticker-band ticker-band--slow" aria-label="Service summary">
     <div class="ticker-viewport">
-      <div class="ticker-track"><span>Whether you are extending your home, converting a loft, building a new property, or renovating an existing building, our experienced design team delivers practical, innovative, and regulation-compliant architectural solutions tailored to your project.</span></div>
-      <div class="ticker-track" aria-hidden="true"><span>Whether you are extending your home, converting a loft, building a new property, or renovating an existing building, our experienced design team delivers practical, innovative, and regulation-compliant architectural solutions tailored to your project.</span></div>
+      <div class="ticker-track"><span><img class="ticker-logo" src="../assets/images/logo/logo-white-mark.png" alt=""> Whether you are extending your home, converting a loft, building a new property, or renovating an existing building, our experienced design team delivers practical, innovative, and regulation-compliant architectural solutions tailored to your project.</span></div>
+      <div class="ticker-track" aria-hidden="true"><span><img class="ticker-logo" src="../assets/images/logo/logo-white-mark.png" alt=""> Whether you are extending your home, converting a loft, building a new property, or renovating an existing building, our experienced design team delivers practical, innovative, and regulation-compliant architectural solutions tailored to your project.</span></div>
     </div>
   </section>
 
@@ -69,7 +74,7 @@
       <article class="service-block">
         <div>
           <h3>Planning Drawings</h3>
-          <p>Professional planning drawings prepared to support planning permission applications for residential and commercial developments. Our drawings are designed to present your proposal clearly while meeting local authority planning requirements.</p>
+          <p class="anim-from-center">Professional planning drawings prepared to support planning permission applications for residential and commercial developments. Our drawings are designed to present your proposal clearly while meeting local authority planning requirements.</p>
         </div>
         <div class="service-block-media">
           <img src="../assets/images/architectural/planning-drawings.png" alt="Planning drawings">
@@ -79,7 +84,7 @@
       <article class="service-block service-block--reverse">
         <div>
           <h3>Building Regulations Drawings</h3>
-          <p>Detailed technical drawings prepared in accordance with current UK Building Regulations. These drawings provide contractors and building control officers with the information required for construction approval.</p>
+          <p class="anim-from-center">Detailed technical drawings prepared in accordance with current UK Building Regulations. These drawings provide contractors and building control officers with the information required for construction approval.</p>
         </div>
         <div class="service-block-media">
           <img src="../assets/images/architectural/building-regs.png" alt="Building Regulations drawings">
@@ -89,7 +94,7 @@
       <article class="service-block">
         <div>
           <h3>House Extensions</h3>
-          <p>Whether you're planning a rear extension, side extension, wraparound extension, or double-storey extension, we design spaces that maximise your property's potential while maintaining functionality and aesthetics.</p>
+          <p class="anim-from-center">Whether you're planning a rear extension, side extension, wraparound extension, or double-storey extension, we design spaces that maximise your property's potential while maintaining functionality and aesthetics.</p>
         </div>
         <div class="service-block-media">
           <img src="../assets/images/architectural/extension.png" alt="House extensions">
@@ -99,7 +104,7 @@
       <article class="service-block service-block--reverse">
         <div>
           <h3>Loft Conversions</h3>
-          <p>Transform unused roof space into functional bedrooms, home offices, bathrooms, or living areas with professionally designed loft conversion plans.</p>
+          <p class="anim-from-center">Transform unused roof space into functional bedrooms, home offices, bathrooms, or living areas with professionally designed loft conversion plans.</p>
         </div>
         <div class="service-block-media">
           <img src="../assets/images/architectural/loft-conversions.png" alt="Loft conversions">
@@ -109,7 +114,7 @@
       <article class="service-block">
         <div>
           <h3>Garage Conversions</h3>
-          <p>Convert your existing garage into additional living accommodation, home offices, gyms, or guest rooms with practical architectural solutions.</p>
+          <p class="anim-from-center">Convert your existing garage into additional living accommodation, home offices, gyms, or guest rooms with practical architectural solutions.</p>
         </div>
         <div class="service-block-media">
           <img src="../assets/images/architectural/garage-conversions.png" alt="Garage conversions">
@@ -119,7 +124,7 @@
       <article class="service-block service-block--reverse">
         <div>
           <h3>New Build Design</h3>
-          <p>From concept development through to construction drawings, we provide complete architectural design services for new residential and commercial developments.</p>
+          <p class="anim-from-center">From concept development through to construction drawings, we provide complete architectural design services for new residential and commercial developments.</p>
         </div>
         <div class="service-block-media">
           <img src="../assets/images/architectural/new-build.png" alt="New build design">
@@ -129,7 +134,7 @@
       <article class="service-block">
         <div>
           <h3>Internal Alterations</h3>
-          <p>We prepare layout redesigns and construction drawings for internal refurbishments, open-plan living spaces, and structural alterations.</p>
+          <p class="anim-from-center">We prepare layout redesigns and construction drawings for internal refurbishments, open-plan living spaces, and structural alterations.</p>
         </div>
         <div class="service-block-media">
           <img src="../assets/images/architectural/internal-alterations.png" alt="Internal alterations">
@@ -138,13 +143,13 @@
     </div>
   </section>
 
-  <section class="section-pad">
+  <section class="section-pad why-section-tint">
     <div class="container">
       <div class="text-center mb-5">
         <span class="section-eyebrow">Why Us</span>
-        <h2 class="section-title">Why Choose ARCHINOVA STRUCTURES LTD?</h2>
+        <h2 class="section-title section-title--blue">Why Choose ARCHINOVA STRUCTURES LTD?</h2>
       </div>
-      <div class="row g-4">
+      <div class="row g-4 slide-in-cards">
         <div class="col-md-6 col-lg-4"><div class="why-item why-box"><div class="why-icon"><i class="bi bi-pencil-square"></i></div><h3>Experienced Design Team</h3><p>Our architectural professionals combine creativity with technical expertise to deliver practical and efficient design solutions.</p></div></div>
         <div class="col-md-6 col-lg-4"><div class="why-item why-box"><div class="why-icon"><i class="bi bi-house-heart"></i></div><h3>Tailored Designs</h3><p>Every property is unique. We create bespoke designs that reflect your objectives, budget, and lifestyle.</p></div></div>
         <div class="col-md-6 col-lg-4"><div class="why-item why-box"><div class="why-icon"><i class="bi bi-shield-check"></i></div><h3>UK Building Regulations Compliance</h3><p>All drawings are prepared with careful consideration of current UK Building Regulations and planning requirements.</p></div></div>
@@ -158,7 +163,7 @@
     <div class="container">
       <div class="text-center mb-5">
         <span class="section-eyebrow">Process</span>
-        <h2 class="section-title">Our Design Process</h2>
+        <h2 class="section-title section-title--blue">Our Design Process</h2>
       </div>
       <div class="process-grid process-grid--5">
         <div class="process-box process-box--media" style="--step-bg: url('../assets/images/architectural/consultation.png');">
@@ -211,10 +216,11 @@
         <div class="row g-4 g-lg-5 align-items-center">
           <div class="col-lg-5">
             <h2>Benefits of Working With ARCHINOVA STRUCTURES</h2>
+            <img class="benefits-logo" src="../assets/images/logo/logo-blue-mark.png" alt="">
           </div>
           <div class="col-lg-7">
             <p class="mb-4">From concept to completion, we provide reliable architectural solutions backed by technical excellence, clear communication, and professional support.</p>
-            <ul class="benefit-list">
+            <ul class="benefit-list tick-draw-list">
             <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-rulers benefit-icon"></i> Tailored Design</li>
             <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-clipboard-check benefit-icon"></i> Planning Support</li>
             <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-buildings benefit-icon"></i> Technical Expertise</li>
@@ -259,23 +265,23 @@
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band cta-band--lg">
     <div class="container">
       <h2>Ready to Discuss Your Project?</h2>
       <p>Whether you're planning a home extension, loft conversion, garage conversion, refurbishment, or a completely new development, our experienced architectural team is ready to assist.</p>
-      <a href="../contact.html" class="btn btn-outline-brand">Get in Touch Today</a>
+      <a href="../contact.html" class="btn btn-cta-invert">Get in Touch Today</a>
     </div>
   </section>
 
-  <footer class="site-footer">
+  <footer class="site-footer site-footer--lg">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="footer-brand">ARCHINOVA STRUCTURES LTD</div>
+          <div class="footer-brand"><a href="../index.html">ARCHINOVA STRUCTURES LTD</a></div>
           <p class="mb-0">Registered Office:<br>128 City Road,<br>London, EC1V 2NX,<br>United Kingdom</p>
         </div>
         <div class="col-6 col-md-2">
-          <h4>Quick Links</h4>
+          <h4 class="footer-heading">Quick Links</h4>
           <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../about.html">About</a></li>
@@ -283,7 +289,7 @@
           </ul>
         </div>
         <div class="col-6 col-md-3">
-          <h4>Services</h4>
+          <h4 class="footer-heading">Services</h4>
           <ul>
             <li><a href="../services/architectural.html">Architectural Design</a></li>
             <li><a href="../services/structural.html">Structural Engineering</a></li>
@@ -293,7 +299,7 @@
           </ul>
         </div>
         <div class="col-md-3">
-          <h4>Get In Touch</h4>
+          <h4 class="footer-heading">Get In Touch</h4>
           <ul>
             <li><a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a></li>
             <li>Phone: <a href="tel:+44XXXXXXXXXX">+44 XX XXXX XXXX</a></li>

@@ -37,7 +37,8 @@ console.log(`${checked} local references checked, ${broken} broken\n`);
 
 console.log("=== Sitewide assertions ===");
 const assertions = [
-  ["navbar logo present", (h) => h.includes("logo/logo-blue-mark.png")],
+  ["navbar logo present", (h) => h.includes("logo/logo-blue-named-horizontal.png")],
+  ["footer brand links home", (h) => /footer-brand[\s\S]*?href="(?:\.\.\/)?index\.html"/.test(h)],
   ['no "Home" nav link', (h) => !h.includes('data-nav="home"')],
   ["nav links centred", (h) => h.includes('navbar-nav mx-auto')],
   ["email is a mailto link", (h) => h.includes('href="mailto:info@archinovastructures.co.uk"')],

@@ -16,8 +16,8 @@
 <body>
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="../index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
-        <img src="../assets/images/logo/logo-blue-mark.png" alt="ARCHINOVA STRUCTURES LTD">
+      <a class="navbar-brand navbar-brand--named" href="../index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
+        <img src="../assets/images/logo/logo-blue-named-horizontal.png" alt="ARCHINOVA STRUCTURES LTD">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,8 +25,8 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav mx-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="../about.html" data-nav="about">About</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+          <li class="nav-item dropdown nav-item--hover">
+            <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Services</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../services/architectural.html" data-nav="architectural.html">Architectural Design</a></li>
               <li><a class="dropdown-item" href="../services/structural.html" data-nav="structural.html">Structural Engineering</a></li>
@@ -35,27 +35,32 @@
               <li><a class="dropdown-item" href="../services/surveys.html" data-nav="surveys.html">Surveys &amp; Inspections</a></li>
             </ul>
           </li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-primary-brand btn-sm px-3" href="../contact.html" data-nav="contact">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-primary-brand btn-nav-contact px-4" href="../contact.html" data-nav="contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="page-hero page-hero--sm" style="background-image: url('../assets/images/partywall/hero-banner.png');">
+  <header
+    class="page-hero page-hero--sm page-hero--tall page-hero--copy-lg"
+    data-hero-slides="../assets/images/partywall/hero-baner-3.png,../assets/images/partywall/hero-baner-1.png,../assets/images/partywall/hero-baner-2.png,../assets/images/partywall/hero-banner.png"
+    data-hero-dir="ltr"
+    style="background-image: url('../assets/images/partywall/hero-baner-3.png');"
+  >
     <div class="container py-5">
       <p class="hero-eyebrow">Party Wall &amp; Boundary</p>
-      <h1>Professional Party Wall &amp; Boundary Services</h1>
-      <p class="hero-text">From serving Party Wall Notices to resolving boundary matters, we provide professional guidance, accurate documentation, and expert support to help your project progress smoothly while ensuring compliance with the Party Wall etc. Act 1996.</p>
+      <h1 class="hero-title-blue">Professional Party Wall &amp; Boundary Services</h1>
+      <p class="hero-text hero-text--lg anim-from-center">From serving Party Wall Notices to resolving boundary matters, we provide professional guidance, accurate documentation, and expert support to help your project progress smoothly while ensuring compliance with the Party Wall etc. Act 1996.</p>
       <div class="hero-ctas">
-        <a href="../contact.html" class="btn btn-primary-brand">Request a Free Consultation</a>
+        <a href="../contact.html" class="btn btn-sky">Request a Free Consultation</a>
       </div>
     </div>
   </header>
 
-  <section class="ticker-band" aria-label="Service summary">
+  <section class="ticker-band ticker-band--slow" aria-label="Service summary">
     <div class="ticker-viewport">
-      <div class="ticker-track"><span>Whether you're planning a house extension, loft conversion, basement excavation, new build development, or structural alterations, our experienced team offers reliable support from initial advice through to Party Wall Awards and boundary assessments.</span></div>
-      <div class="ticker-track" aria-hidden="true"><span>Whether you're planning a house extension, loft conversion, basement excavation, new build development, or structural alterations, our experienced team offers reliable support from initial advice through to Party Wall Awards and boundary assessments.</span></div>
+      <div class="ticker-track"><span><img class="ticker-logo" src="../assets/images/logo/logo-white-mark.png" alt=""> Whether you're planning a house extension, loft conversion, basement excavation, new build development, or structural alterations, our experienced team offers reliable support from initial advice through to Party Wall Awards and boundary assessments.</span></div>
+      <div class="ticker-track" aria-hidden="true"><span><img class="ticker-logo" src="../assets/images/logo/logo-white-mark.png" alt=""> Whether you're planning a house extension, loft conversion, basement excavation, new build development, or structural alterations, our experienced team offers reliable support from initial advice through to Party Wall Awards and boundary assessments.</span></div>
     </div>
   </section>
 
@@ -133,13 +138,13 @@
     </div>
   </section>
 
-  <section class="section-pad">
+  <section class="section-pad pw-why-section">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-6">
           <span class="section-eyebrow">Why Us</span>
-          <h2 class="section-title">Why Choose ARCHINOVA STRUCTURES LTD?</h2>
-          <ul class="check-list">
+          <h2 class="section-title section-title--blue">Why Choose ARCHINOVA STRUCTURES LTD?</h2>
+          <ul class="check-list tick-draw-list grow-on-hover">
             <li><i class="bi bi-check-circle-fill"></i> Experienced Architectural &amp; Structural Professionals</li>
             <li><i class="bi bi-check-circle-fill"></i> Professional Party Wall Guidance</li>
             <li><i class="bi bi-check-circle-fill"></i> Technical Boundary Advice</li>
@@ -147,13 +152,13 @@
             <li><i class="bi bi-check-circle-fill"></i> Reliable Documentation</li>
             <li><i class="bi bi-check-circle-fill"></i> Fast Turnaround</li>
             <li><i class="bi bi-check-circle-fill"></i> Personalised Client Support</li>
-            <li><i class="bi bi-check-circle-fill"></i> Professional Service Across England</li>
+            <li><i class="bi bi-check-circle-fill"></i> Professional Service</li>
           </ul>
         </div>
         <div class="col-lg-6">
           <span class="section-eyebrow">Coverage</span>
-          <h2 class="section-title">Projects We Support</h2>
-          <ul class="industry-list">
+          <h2 class="section-title section-title--blue">Projects We Support</h2>
+          <ul class="chip-list text-size-up">
             <li>House Extensions</li>
             <li>Loft Conversions</li>
             <li>Garage Conversions</li>
@@ -219,10 +224,11 @@
         <div class="row g-4 g-lg-5 align-items-center">
           <div class="col-lg-5">
             <h2>Benefits of Working With ARCHINOVA STRUCTURES</h2>
+            <img class="benefits-logo" src="../assets/images/logo/logo-white-mark.png" alt="">
           </div>
           <div class="col-lg-7">
             <p class="mb-4">Whether you're planning construction or resolving a neighbour dispute, our experienced surveyors provide impartial Party Wall and Boundary services to protect your property, ensure legal compliance, and help projects progress with confidence.</p>
-            <ul class="benefit-list">
+            <ul class="benefit-list tick-draw-list">
             <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-bank benefit-icon"></i> Party Wall Expertise</li>
             <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-file-earmark-text benefit-icon"></i> Notices &amp; Awards</li>
             <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-rulers benefit-icon"></i> Boundary Assessments</li>
@@ -267,23 +273,23 @@
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band cta-band--lg">
     <div class="container">
       <h2>Start Your Project With Confidence</h2>
       <p>ARCHINOVA STRUCTURES LTD provides professional Party Wall and Boundary services to help your project proceed safely and efficiently.</p>
-      <a href="../contact.html" class="btn btn-outline-brand">Contact Us Today</a>
+      <a href="../contact.html" class="btn btn-cta-invert">Contact Us Today</a>
     </div>
   </section>
 
-  <footer class="site-footer">
+  <footer class="site-footer site-footer--lg">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="footer-brand">ARCHINOVA STRUCTURES LTD</div>
+          <div class="footer-brand"><a href="../index.html">ARCHINOVA STRUCTURES LTD</a></div>
           <p class="mb-0">Registered Office:<br>128 City Road,<br>London, EC1V 2NX,<br>United Kingdom</p>
         </div>
         <div class="col-6 col-md-2">
-          <h4>Quick Links</h4>
+          <h4 class="footer-heading">Quick Links</h4>
           <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../about.html">About</a></li>
@@ -291,7 +297,7 @@
           </ul>
         </div>
         <div class="col-6 col-md-3">
-          <h4>Services</h4>
+          <h4 class="footer-heading">Services</h4>
           <ul>
             <li><a href="../services/architectural.html">Architectural Design</a></li>
             <li><a href="../services/structural.html">Structural Engineering</a></li>
@@ -301,7 +307,7 @@
           </ul>
         </div>
         <div class="col-md-3">
-          <h4>Get In Touch</h4>
+          <h4 class="footer-heading">Get In Touch</h4>
           <ul>
             <li><a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a></li>
             <li>Phone: <a href="tel:+44XXXXXXXXXX">+44 XX XXXX XXXX</a></li>

@@ -16,8 +16,8 @@
 <body>
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="../index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
-        <img src="../assets/images/logo/logo-blue-mark.png" alt="ARCHINOVA STRUCTURES LTD">
+      <a class="navbar-brand navbar-brand--named" href="../index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
+        <img src="../assets/images/logo/logo-blue-named-horizontal.png" alt="ARCHINOVA STRUCTURES LTD">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,8 +25,8 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav mx-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="../about.html" data-nav="about">About</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+          <li class="nav-item dropdown nav-item--hover">
+            <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Services</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../services/architectural.html" data-nav="architectural.html">Architectural Design</a></li>
               <li><a class="dropdown-item" href="../services/structural.html" data-nav="structural.html">Structural Engineering</a></li>
@@ -35,27 +35,32 @@
               <li><a class="dropdown-item" href="../services/surveys.html" data-nav="surveys.html">Surveys &amp; Inspections</a></li>
             </ul>
           </li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-primary-brand btn-sm px-3" href="../contact.html" data-nav="contact">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-primary-brand btn-nav-contact px-4" href="../contact.html" data-nav="contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="page-hero page-hero--sm" style="background-image: url('../assets/images/planning/hero-bg.png');">
+  <header
+    class="page-hero page-hero--sm page-hero--tall page-hero--copy-lg"
+    data-hero-slides="../assets/images/planning/hero-bg.png,../assets/images/planning/hero-bg-1.png,../assets/images/planning/hero-bg-2.png,../assets/images/planning/hero-bg-3.png"
+    data-hero-dir="ltr"
+    style="background-image: url('../assets/images/planning/hero-bg.png');"
+  >
     <div class="container py-5">
       <p class="hero-eyebrow">Planning &amp; Building Control</p>
-      <h1>Planning &amp; Building Control Services</h1>
-      <p class="hero-text">Professional guidance and technical expertise to help you secure the approvals your project needs — from initial consultation through to Building Control compliance.</p>
+      <h1 class="hero-title-blue">Planning &amp; Building Control Services</h1>
+      <p class="hero-text hero-text--lg anim-from-center">Professional guidance and technical expertise to help you secure the approvals your project needs — from initial consultation through to Building Control compliance.</p>
       <div class="hero-ctas">
-        <a href="../contact.html" class="btn btn-primary-brand">Request a Free Consultation</a>
+        <a href="../contact.html" class="btn btn-sky">Request a Free Consultation</a>
       </div>
     </div>
   </header>
 
-  <section class="ticker-band" aria-label="Service summary">
+  <section class="ticker-band ticker-band--slow" aria-label="Service summary">
     <div class="ticker-viewport">
-      <div class="ticker-track"><span>Whether you're extending your home, converting a loft, constructing a new build, or carrying out structural alterations, our experienced team provides the professional guidance needed to make your project as smooth and stress-free as possible.</span></div>
-      <div class="ticker-track" aria-hidden="true"><span>Whether you're extending your home, converting a loft, constructing a new build, or carrying out structural alterations, our experienced team provides the professional guidance needed to make your project as smooth and stress-free as possible.</span></div>
+      <div class="ticker-track"><span><img class="ticker-logo" src="../assets/images/logo/logo-white-mark.png" alt=""> Whether you're extending your home, converting a loft, constructing a new build, or carrying out structural alterations, our experienced team provides the professional guidance needed to make your project as smooth and stress-free as possible.</span></div>
+      <div class="ticker-track" aria-hidden="true"><span><img class="ticker-logo" src="../assets/images/logo/logo-white-mark.png" alt=""> Whether you're extending your home, converting a loft, constructing a new build, or carrying out structural alterations, our experienced team provides the professional guidance needed to make your project as smooth and stress-free as possible.</span></div>
     </div>
   </section>
 
@@ -132,13 +137,24 @@
 
   <section class="section-pad">
     <div class="container">
-      <div class="text-center mb-5">
-        <span class="section-eyebrow">Why Us</span>
-        <h2 class="section-title">Why Choose ARCHINOVA STRUCTURES LTD?</h2>
-      </div>
-      <div class="row g-3">
-        <div class="col-md-6"><ul class="check-list"><li><i class="bi bi-check-circle-fill"></i> Experienced Architectural &amp; Structural Professionals</li><li><i class="bi bi-check-circle-fill"></i> Complete Planning &amp; Building Control Support</li><li><i class="bi bi-check-circle-fill"></i> Fully Compliant Drawing Packages</li><li><i class="bi bi-check-circle-fill"></i> Professional Technical Advice</li></ul></div>
-        <div class="col-md-6"><ul class="check-list"><li><i class="bi bi-check-circle-fill"></i> Fast Turnaround Times</li><li><i class="bi bi-check-circle-fill"></i> Residential &amp; Commercial Expertise</li><li><i class="bi bi-check-circle-fill"></i> Personalised Service</li><li><i class="bi bi-check-circle-fill"></i> Reliable Ongoing Project Support</li></ul></div>
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <span class="section-eyebrow">Why Us</span>
+          <h2 class="section-title section-title--blue">Why Choose ARCHINOVA STRUCTURES LTD?</h2>
+          <ul class="check-list tick-draw-list grow-on-hover">
+            <li><i class="bi bi-check-circle-fill"></i> Experienced Architectural &amp; Structural Professionals</li>
+            <li><i class="bi bi-check-circle-fill"></i> Professional Party Wall Guidance</li>
+            <li><i class="bi bi-check-circle-fill"></i> Technical Boundary Advice</li>
+            <li><i class="bi bi-check-circle-fill"></i> Residential &amp; Commercial Expertise</li>
+            <li><i class="bi bi-check-circle-fill"></i> Reliable Documentation</li>
+            <li><i class="bi bi-check-circle-fill"></i> Fast Turnaround</li>
+            <li><i class="bi bi-check-circle-fill"></i> Personalised Client Support</li>
+            <li><i class="bi bi-check-circle-fill"></i> Professional Service</li>
+          </ul>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img class="planning-why-logo" src="../assets/images/logo/logo-blue-mark.png" alt="">
+        </div>
       </div>
     </div>
   </section>
@@ -186,23 +202,23 @@
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band cta-band--lg">
     <div class="container">
       <h2>Start Your Project With Confidence</h2>
       <p>Get in touch today to discuss your project and receive expert planning and Building Control support.</p>
-      <a href="../contact.html" class="btn btn-outline-brand">Get in Touch Today</a>
+      <a href="../contact.html" class="btn btn-cta-invert">Get in Touch Today</a>
     </div>
   </section>
 
-  <footer class="site-footer">
+  <footer class="site-footer site-footer--lg">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="footer-brand">ARCHINOVA STRUCTURES LTD</div>
+          <div class="footer-brand"><a href="../index.html">ARCHINOVA STRUCTURES LTD</a></div>
           <p class="mb-0">Registered Office:<br>128 City Road,<br>London, EC1V 2NX,<br>United Kingdom</p>
         </div>
         <div class="col-6 col-md-2">
-          <h4>Quick Links</h4>
+          <h4 class="footer-heading">Quick Links</h4>
           <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../about.html">About</a></li>
@@ -210,7 +226,7 @@
           </ul>
         </div>
         <div class="col-6 col-md-3">
-          <h4>Services</h4>
+          <h4 class="footer-heading">Services</h4>
           <ul>
             <li><a href="../services/architectural.html">Architectural Design</a></li>
             <li><a href="../services/structural.html">Structural Engineering</a></li>
@@ -220,7 +236,7 @@
           </ul>
         </div>
         <div class="col-md-3">
-          <h4>Get In Touch</h4>
+          <h4 class="footer-heading">Get In Touch</h4>
           <ul>
             <li><a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a></li>
             <li>Phone: <a href="tel:+44XXXXXXXXXX">+44 XX XXXX XXXX</a></li>

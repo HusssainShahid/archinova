@@ -35,7 +35,7 @@ by side against the original brief.
 
 | ID | Requirement | Done | Tested | Evidence / Notes |
 |---|---|---|---|---|
-| P0-01 | Create `V2-CHECKLIST.md` and `V2-QUESTIONS.md` in repo root | ☑ Done | ☑ Tested | Both files exist in root |
+| P0-01 | Create `V2-CHECKLIST.md` and `V2-QUESTIONS.md` in repo root | ☑ Done | ☑ Tested | Both files live under `requirements/v2/` (moved from root during cleanup) |
 | P0-02 | Rename supplied images to URL-safe lowercase filenames | ☑ Done | ☑ Tested | Search for `[ &A-Z]` across `assets/images` returns nothing |
 | P0-03 | Consolidate 5 byte-identical copies of the white logo mark into one shared file | ☑ Done | ☑ Tested | MD5 all matched `1D17A88A…`; merged to `assets/images/logo/logo-white-mark.png` |
 | P0-04 | Confirm every image path referenced in HTML resolves (no 404s) | ☑ Done | ☑ Tested | `tools/verify.mjs`: 219 local refs, 0 broken |

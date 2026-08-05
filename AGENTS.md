@@ -4,8 +4,9 @@ Static site, 11 HTML pages, Bootstrap 5.3 via CDN. No framework, no build step, 
 Read `README.md` first for the page list and how to run it. This file covers the conventions
 that are not obvious from the code and that are easy to break.
 
-The v2 revision brief (`v2.md`) has been fully implemented. What remains is the open client
-questions in `V2-QUESTIONS.md` (status `NEEDS ANSWER`).
+**Active revision is v3** (implemented). Brief, checklist and questions live under
+`requirements/v3/`. Open client questions may still be `NEEDS ANSWER` there and in
+`requirements/v2/V2-QUESTIONS.md`.
 
 ## Before you finish any change
 
@@ -13,9 +14,10 @@ questions in `V2-QUESTIONS.md` (status `NEEDS ANSWER`).
 node tools/verify.mjs
 ```
 
-It resolves every local `href`/`src` across all 11 pages and asserts the v2 design is still
-in place. It must end in `0 broken references, 0 failed assertions`. Treat a new failure as
-your bug, not a stale test.
+It resolves every local `href`/`src` across all 11 pages and asserts the current design is
+still in place. It must end in `0 broken references, 0 failed assertions`. Treat a new
+failure as your bug, not a stale test. When a revision lands durable invariants, extend the
+assertions there rather than weakening existing ones.
 
 ## The navbar and footer are generated
 
@@ -34,34 +36,38 @@ Those are spent one-shot migrations, kept only as a record. They assume the pre-
 the files. `apply-services.mjs` is not idempotent and will corrupt already-migrated service
 pages. `mark-questions.mjs` is obsolete — it expects the old 32-question format.
 
-## `V2-CHECKLIST.md` has strict rules
+## Checklists have strict rules
 
-The client reads this file against `v2.md`, line by line.
+Active: [`requirements/v3/V3-CHECKLIST.md`](requirements/v3/V3-CHECKLIST.md) against
+[`requirements/v3/V3.md`](requirements/v3/V3.md).
+Archived v2: [`requirements/v2/V2-CHECKLIST.md`](requirements/v2/V2-CHECKLIST.md) against
+[`requirements/v2/v2.md`](requirements/v2/v2.md).
 
 - **Rows are never deleted, reworded, or renumbered.** An ID keeps its wording forever.
 - Only the `Done`, `Tested` and `Evidence / Notes` cells may change.
 - `Done` and `Tested` are separate on purpose: `Done` = code written, `Tested` = proven to
   work with the proof named in `Evidence`. Both must be ticked to count as finished.
 - `≈ Ours` means we made the call ourselves and the reasoning is in `Evidence / Notes`.
-  `≈ Qn` / `🔒 Qn` point at a question in `V2-QUESTIONS.md`.
+  `≈ Qn` / `🔒 Qn` point at a question in the matching questions file under the same
+  `requirements/vN/` folder.
 - No literal `|` inside a cell — it breaks the table. Write "then" or similar.
 
-`node tools/check-refs.mjs` catches a checklist row pointing at a question that no longer
-exists.
+`node tools/check-refs.mjs` checks both v2 and v3 checklist ↔ questions pairs.
 
-Question numbers in `V2-QUESTIONS.md` are also permanent and never reused, because the
-checklist cross-references them. The file deliberately contains only what the client must
-answer; anything we could decide ourselves was moved to the checklist as `≈ Ours`.
+Question numbers in each questions file are permanent and never reused. Each questions file
+deliberately contains only what the client must answer; anything we could decide ourselves
+was moved to the checklist as `≈ Ours`. Do not renumber v3 questions to match v2 — they are
+separate series.
 
 ## Conventions that are easy to get wrong
 
 **"England" vs "England & Wales".** Coverage and marketing copy says **"England"**. Legal
 and company-registration copy says **"England & Wales"**. This split is intentional and is
-itself an open question (Q3) — do not "fix" one to match the other.
+itself an open question (v2 Q3) — do not "fix" one to match the other.
 
 **Placeholder phone number is deliberate.** `+44 XX XXXX XXXX` / `tel:+44XXXXXXXXXX` /
 `wa.me/44XXXXXXXXXX` appear sitewide via `apply-shell.mjs`. The markup is complete; the
-number is fake so it cannot ship unnoticed (Q1). Don't invent one.
+number is fake so it cannot ship unnoticed (v2 Q1). Don't invent one.
 
 **Forms post to Web3Forms.** `js/main.js` → `initEnquiryForms()` handles any element with
 `data-enquiry-form`. Two forms use it: Contact, and "Request a Quote" on About. A live
@@ -87,17 +93,23 @@ and the mirror mistake of bare `.process-box` children in a `.row`.
 anywhere under `assets/images` — the originals had all three. Keep new files to that
 pattern.
 
-**Logos live in `assets/images/logo/`.** Five byte-identical copies of the white mark were
-consolidated into one shared file. The supplied files had a large empty border that made the
-mark render tiny, so they were trimmed; untrimmed originals are preserved in
-`assets/images/logo/_original/` — that folder is a record, not something to reference from
-HTML.
+**Logos live in `assets/images/logo/`.** Shared marks are URL-safe under that folder.
+Untrimmed originals may be preserved in `assets/images/logo/_original/` — that folder is a
+record, not something to reference from HTML. Navbar uses the horizontal named mark
+`logo-blue-named-horizontal.png`.
 
-**`requirements/` is client source material.** Original briefs and images. Nothing on the
-live site links to it. Don't prune it.
+**`requirements/` is client source material, versioned.** Nothing on the live site links to
+it. Don't prune it.
+
+| Folder | Contents |
+|--------|----------|
+| `requirements/v1/` | Original client briefs, Word docs and images for the first build |
+| `requirements/v2/` | v2 brief (`v2.md`), checklist and questions |
+| `requirements/v3/` | v3 brief (`V3.md`), checklist and questions |
 
 ## Environment
 
 Windows, PowerShell. `&&` chaining and `head`/`tail` are unavailable — use `;` and
 `Select-Object -First`. Node is available for scripts; `sharp` is not a committed dependency
-and is installed ad hoc when image processing is needed.
+and is installed ad hoc when image processing is needed. Do not commit `node_modules`,
+Playwright scratch (`.playwright-mcp/`), or `v3-qa-*.png` screenshots.

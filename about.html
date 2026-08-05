@@ -16,8 +16,8 @@
 <body>
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
-        <img src="assets/images/logo/logo-blue-mark.png" alt="ARCHINOVA STRUCTURES LTD">
+      <a class="navbar-brand navbar-brand--named" href="index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
+        <img src="assets/images/logo/logo-blue-named-horizontal.png" alt="ARCHINOVA STRUCTURES LTD">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,8 +25,8 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav mx-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="about.html" data-nav="about">About</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+          <li class="nav-item dropdown nav-item--hover">
+            <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Services</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="services/architectural.html" data-nav="architectural.html">Architectural Design</a></li>
               <li><a class="dropdown-item" href="services/structural.html" data-nav="structural.html">Structural Engineering</a></li>
@@ -35,17 +35,22 @@
               <li><a class="dropdown-item" href="services/surveys.html" data-nav="surveys.html">Surveys &amp; Inspections</a></li>
             </ul>
           </li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-primary-brand btn-sm px-3" href="contact.html" data-nav="contact">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-primary-brand btn-nav-contact px-4" href="contact.html" data-nav="contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="page-hero page-hero--sm" style="background-image: url('assets/images/about/hero-banner.png');">
+  <header
+    class="page-hero page-hero--sm page-hero--tall page-hero--copy-lg"
+    data-hero-slides="assets/images/about/hero-banner.png,assets/images/about/hero-baner-1.png,assets/images/about/hero-baner-2.png"
+    data-hero-dir="rtl"
+    style="background-image: url('assets/images/about/hero-banner.png');"
+  >
     <div class="container py-5">
       <p class="hero-eyebrow">Who We Are</p>
       <h1>About ARCHINOVA STRUCTURES LTD</h1>
-      <p class="hero-text">We help bring building projects to life through professional architectural and structural engineering services. Whether you're planning a new build, extension, renovation, or commercial development, we're here to provide practical, reliable, and compliant solutions every step of the way.</p>
+      <p class="hero-text hero-text--lg anim-from-center">We help bring building projects to life through professional architectural and structural engineering services. Whether you're planning a new build, extension, renovation, or commercial development, we're here to provide practical, reliable, and compliant solutions every step of the way.</p>
     </div>
   </header>
 
@@ -59,13 +64,21 @@
     </div>
   </section>
 
-  <section class="section-pad bg-off">
+  <section class="services-marquee" aria-label="Services we provide">
+    <div class="ticker-viewport">
+      <div class="ticker-track"><span>ARCHITECTURAL DESIGN &nbsp;·&nbsp; STRUCTURAL SERVICES &nbsp;·&nbsp; PARTY WALL &amp; BOUNDARY SERVICES &nbsp;·&nbsp; PLANNING &amp; BUILDING CONTROL SERVICES &nbsp;·&nbsp; </span></div>
+      <div class="ticker-track" aria-hidden="true"><span>ARCHITECTURAL DESIGN &nbsp;·&nbsp; STRUCTURAL SERVICES &nbsp;·&nbsp; PARTY WALL &amp; BOUNDARY SERVICES &nbsp;·&nbsp; PLANNING &amp; BUILDING CONTROL SERVICES &nbsp;·&nbsp; </span></div>
+    </div>
+  </section>
+
+  <section class="section-pad about-process-wrap">
     <div class="container">
-      <div class="text-center mb-5">
-        <span class="section-eyebrow">Our Process</span>
-        <h2 class="section-title">From Concept to Completion</h2>
-      </div>
-      <div class="process-timeline">
+      <div class="about-process-box">
+        <div class="text-center mb-5">
+          <span class="section-eyebrow">From Concept to Completion</span>
+          <h2 class="section-title">OUR PROCESS</h2>
+        </div>
+        <div class="process-timeline has-progress">
         <div class="timeline-row">
           <div class="timeline-card">
             <h3>Consultation</h3>
@@ -117,12 +130,13 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
   <section class="section-pad">
     <div class="container">
-      <div class="expertise-panel">
+      <div class="expertise-panel expertise-panel--tall">
         <div class="expertise-panel-head" style="background-image: url('assets/images/about/expertise-bg.png');">
           <span class="section-eyebrow">Our Expertise</span>
           <h3>Expert Solutions for Every Stage of Your Project</h3>
@@ -207,7 +221,7 @@
     </div>
   </section>
 
-  <section class="section-pad">
+  <section class="section-pad about-quote-section">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-9">
@@ -288,15 +302,15 @@
     </div>
   </section>
 
-  <footer class="site-footer">
+  <footer class="site-footer site-footer--lg">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="footer-brand">ARCHINOVA STRUCTURES LTD</div>
+          <div class="footer-brand"><a href="index.html">ARCHINOVA STRUCTURES LTD</a></div>
           <p class="mb-0">Registered Office:<br>128 City Road,<br>London, EC1V 2NX,<br>United Kingdom</p>
         </div>
         <div class="col-6 col-md-2">
-          <h4>Quick Links</h4>
+          <h4 class="footer-heading">Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -304,7 +318,7 @@
           </ul>
         </div>
         <div class="col-6 col-md-3">
-          <h4>Services</h4>
+          <h4 class="footer-heading">Services</h4>
           <ul>
             <li><a href="services/architectural.html">Architectural Design</a></li>
             <li><a href="services/structural.html">Structural Engineering</a></li>
@@ -314,7 +328,7 @@
           </ul>
         </div>
         <div class="col-md-3">
-          <h4>Get In Touch</h4>
+          <h4 class="footer-heading">Get In Touch</h4>
           <ul>
             <li><a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a></li>
             <li>Phone: <a href="tel:+44XXXXXXXXXX">+44 XX XXXX XXXX</a></li>

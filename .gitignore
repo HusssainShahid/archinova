@@ -4,6 +4,7 @@ package-lock.json
 
 # Playwright MCP scratch output
 .playwright-mcp/
+v3-qa-*.png
 
 # OS / editor
 Thumbs.db

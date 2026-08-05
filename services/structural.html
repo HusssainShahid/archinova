@@ -16,8 +16,8 @@
 <body>
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="../index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
-        <img src="../assets/images/logo/logo-blue-mark.png" alt="ARCHINOVA STRUCTURES LTD">
+      <a class="navbar-brand navbar-brand--named" href="../index.html" aria-label="ARCHINOVA STRUCTURES LTD — home">
+        <img src="../assets/images/logo/logo-blue-named-horizontal.png" alt="ARCHINOVA STRUCTURES LTD">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,8 +25,8 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav mx-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="../about.html" data-nav="about">About</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+          <li class="nav-item dropdown nav-item--hover">
+            <a class="nav-link dropdown-toggle" href="#" data-nav="services" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Services</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../services/architectural.html" data-nav="architectural.html">Architectural Design</a></li>
               <li><a class="dropdown-item" href="../services/structural.html" data-nav="structural.html">Structural Engineering</a></li>
@@ -35,27 +35,32 @@
               <li><a class="dropdown-item" href="../services/surveys.html" data-nav="surveys.html">Surveys &amp; Inspections</a></li>
             </ul>
           </li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-primary-brand btn-sm px-3" href="../contact.html" data-nav="contact">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-primary-brand btn-nav-contact px-4" href="../contact.html" data-nav="contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="page-hero page-hero--sm" style="background-image: url('../assets/images/structural/hero-bg.png');">
+  <header
+    class="page-hero page-hero--sm page-hero--tall page-hero--copy-lg"
+    data-hero-slides="../assets/images/structural/hero-baner-1.png,../assets/images/structural/hero-baner-2.png,../assets/images/structural/hero-baner-3.png,../assets/images/structural/hero-bg.png"
+    data-hero-dir="ltr"
+    style="background-image: url('../assets/images/structural/hero-baner-1.png');"
+  >
     <div class="container py-5">
       <p class="hero-eyebrow">Structural Engineering</p>
-      <h1>Professional Structural Engineering Solutions</h1>
-      <p class="hero-text">Professional structural engineering solutions that are safe, practical, and fully compliant with current UK Building Regulations and industry standards.</p>
+      <h1 class="hero-title-blue">Professional Structural Engineering Solutions</h1>
+      <p class="hero-text hero-text--lg anim-from-center">Professional structural engineering solutions that are safe, practical, and fully compliant with current UK Building Regulations and industry standards.</p>
       <div class="hero-ctas">
-        <a href="../contact.html" class="btn btn-primary-brand">Request a Free Consultation</a>
+        <a href="../contact.html" class="btn btn-sky">Request a Free Consultation</a>
       </div>
     </div>
   </header>
 
-  <section class="ticker-band" aria-label="Service summary">
+  <section class="ticker-band ticker-band--slow" aria-label="Service summary">
     <div class="ticker-viewport">
-      <div class="ticker-track"><span>Whether you are planning a home extension, removing a load-bearing wall, constructing a new building, or undertaking major structural alterations, we provide detailed structural calculations, technical drawings, and engineering advice from concept to completion.</span></div>
-      <div class="ticker-track" aria-hidden="true"><span>Whether you are planning a home extension, removing a load-bearing wall, constructing a new building, or undertaking major structural alterations, we provide detailed structural calculations, technical drawings, and engineering advice from concept to completion.</span></div>
+      <div class="ticker-track"><span><img class="ticker-logo" src="../assets/images/logo/logo-white-mark.png" alt=""> Whether you are planning a home extension, removing a load-bearing wall, constructing a new building, or undertaking major structural alterations, we provide detailed structural calculations, technical drawings, and engineering advice from concept to completion.</span></div>
+      <div class="ticker-track" aria-hidden="true"><span><img class="ticker-logo" src="../assets/images/logo/logo-white-mark.png" alt=""> Whether you are planning a home extension, removing a load-bearing wall, constructing a new building, or undertaking major structural alterations, we provide detailed structural calculations, technical drawings, and engineering advice from concept to completion.</span></div>
     </div>
   </section>
 
@@ -201,10 +206,11 @@
         <div class="row g-4 g-lg-5 align-items-center">
           <div class="col-lg-5">
             <h2>Benefits of Working With ARCHINOVA STRUCTURES</h2>
+            <img class="benefits-logo" src="../assets/images/logo/logo-white-mark.png" alt="">
           </div>
           <div class="col-lg-7">
             <p class="mb-4">From structural assessments to detailed engineering designs, we deliver safe, practical, and cost-effective structural solutions backed by technical expertise, regulatory compliance, and dependable project support.</p>
-            <ul class="benefit-list">
+            <ul class="benefit-list tick-draw-list">
             <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-rulers benefit-icon"></i> Precision Engineering</li>
             <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-building-check benefit-icon"></i> Safe &amp; Reliable Structures</li>
             <li><span class="benefit-tick"><i class="bi bi-check-lg"></i></span><i class="bi bi-clipboard-data benefit-icon"></i> Detailed Structural Reports</li>
@@ -249,23 +255,23 @@
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="cta-band cta-band--lg">
     <div class="container">
       <h2>Ready to Start Your Project?</h2>
       <p>Whether you require structural calculations, steel beam design, foundation engineering, structural reports, or construction support, ARCHINOVA STRUCTURES LTD is here to help.</p>
-      <a href="../contact.html" class="btn btn-outline-brand">Contact Us Today</a>
+      <a href="../contact.html" class="btn btn-cta-invert">Contact Us Today</a>
     </div>
   </section>
 
-  <footer class="site-footer">
+  <footer class="site-footer site-footer--lg">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="footer-brand">ARCHINOVA STRUCTURES LTD</div>
+          <div class="footer-brand"><a href="../index.html">ARCHINOVA STRUCTURES LTD</a></div>
           <p class="mb-0">Registered Office:<br>128 City Road,<br>London, EC1V 2NX,<br>United Kingdom</p>
         </div>
         <div class="col-6 col-md-2">
-          <h4>Quick Links</h4>
+          <h4 class="footer-heading">Quick Links</h4>
           <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../about.html">About</a></li>
@@ -273,7 +279,7 @@
           </ul>
         </div>
         <div class="col-6 col-md-3">
-          <h4>Services</h4>
+          <h4 class="footer-heading">Services</h4>
           <ul>
             <li><a href="../services/architectural.html">Architectural Design</a></li>
             <li><a href="../services/structural.html">Structural Engineering</a></li>
@@ -283,7 +289,7 @@
           </ul>
         </div>
         <div class="col-md-3">
-          <h4>Get In Touch</h4>
+          <h4 class="footer-heading">Get In Touch</h4>
           <ul>
             <li><a href="mailto:info@archinovastructures.co.uk">info@archinovastructures.co.uk</a></li>
             <li>Phone: <a href="tel:+44XXXXXXXXXX">+44 XX XXXX XXXX</a></li>

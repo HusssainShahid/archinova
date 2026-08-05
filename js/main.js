@@ -33,7 +33,7 @@
   }
 
   // Web3Forms relays each submission to the inbox its access key belongs to.
-  // The key below is a deliberate placeholder (V2-QUESTIONS.md Q2): until it is
+  // The key below is a deliberate placeholder (requirements/v2/V2-QUESTIONS.md Q2): until it is
   // replaced with a real one the forms keep the older mailto: behaviour, so the
   // site is never worse off than before but also cannot post into a void.
   var WEB3FORMS_KEY = "dec27af9-4490-4cce-a17c-ca91fcfada92";
@@ -190,5 +190,103 @@
   document.addEventListener("DOMContentLoaded", function () {
     setActiveNav();
     initEnquiryForms();
+    initHeroSlideshows();
+    initCountUps();
+    initHoverDropdowns();
   });
+
+  function initHoverDropdowns() {
+    if (window.matchMedia("(hover: hover) and (min-width: 992px)").matches === false) return;
+    document.querySelectorAll(".nav-item--hover").forEach(function (item) {
+      var toggle = item.querySelector("[data-bs-toggle='dropdown']");
+      if (!toggle || typeof bootstrap === "undefined") return;
+      var dropdown = bootstrap.Dropdown.getOrCreateInstance(toggle, { autoClose: true });
+      item.addEventListener("mouseenter", function () {
+        dropdown.show();
+      });
+      item.addEventListener("mouseleave", function () {
+        dropdown.hide();
+      });
+    });
+  }
+
+  function initHeroSlideshows() {
+    document.querySelectorAll("[data-hero-slides]").forEach(function (hero) {
+      var list = (hero.getAttribute("data-hero-slides") || "")
+        .split(",")
+        .map(function (s) {
+          return s.trim();
+        })
+        .filter(Boolean);
+      if (list.length < 2) return;
+
+      var layer = document.createElement("div");
+      layer.className = "hero-slides";
+      layer.setAttribute("aria-hidden", "true");
+      list.forEach(function (src, i) {
+        var slide = document.createElement("div");
+        slide.className = "hero-slide" + (i === 0 ? " is-active" : "");
+        slide.style.backgroundImage = "url('" + src + "')";
+        layer.appendChild(slide);
+      });
+      hero.classList.add("page-hero--slideshow");
+      hero.insertBefore(layer, hero.firstChild);
+      hero.style.backgroundImage = "none";
+
+      var slides = layer.querySelectorAll(".hero-slide");
+      var index = 0;
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce) return;
+
+      setInterval(function () {
+        slides[index].classList.remove("is-active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("is-active");
+      }, 4500);
+    });
+  }
+
+  function initCountUps() {
+    var figures = document.querySelectorAll(".achievement-figure[data-count]");
+    if (!figures.length) return;
+
+    function animate(el) {
+      var target = parseFloat(el.getAttribute("data-count"));
+      var suffix = el.getAttribute("data-suffix") || "";
+      var prefix = el.getAttribute("data-prefix") || "";
+      var duration = 1200;
+      var start = null;
+
+      function frame(ts) {
+        if (!start) start = ts;
+        var p = Math.min(1, (ts - start) / duration);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var value = Math.round(target * eased);
+        el.textContent = prefix + value + suffix;
+        if (p < 1) requestAnimationFrame(frame);
+      }
+
+      requestAnimationFrame(frame);
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      figures.forEach(animate);
+      return;
+    }
+
+    var seen = new WeakSet();
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting || seen.has(entry.target)) return;
+          seen.add(entry.target);
+          animate(entry.target);
+        });
+      },
+      { threshold: 0.4 }
+    );
+    figures.forEach(function (el) {
+      io.observe(el);
+    });
+  }
 })();
