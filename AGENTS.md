@@ -66,8 +66,9 @@ and company-registration copy says **"England & Wales"**. This split is intentio
 itself an open question (v2 Q3) — do not "fix" one to match the other.
 
 **Phone and WhatsApp** live in `tools/apply-shell.mjs` (`PHONE_DISPLAY`, `PHONE_HREF`,
-`WHATSAPP_HREF`) plus the Contact cards. Current landline is `0330 043 3245`
-(`tel:+443300433245`, `wa.me/443300433245`). Do not revert to the old placeholder.
+`WHATSAPP_DISPLAY`, `WHATSAPP_HREF`) plus the Contact cards. Phone landline is
+`0330 043 3245` (`tel:+443300433245`). WhatsApp is mobile `07848 476375`
+(`wa.me/447848476375`). Do not revert to the old placeholder.
 
 **Forms post to Web3Forms.** `js/main.js` → `initEnquiryForms()` handles any element with
 `data-enquiry-form`. Two forms use it: Contact, and "Request a Quote" on About. A live
