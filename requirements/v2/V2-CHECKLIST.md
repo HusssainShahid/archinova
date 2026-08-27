@@ -136,8 +136,8 @@ by side against the original brief.
 |---|---|---|---|---|
 | FOOT-01 | Email address clickable (opens mail) | ☑ Done | ☑ Tested | `mailto:` present on all 11 pages |
 | FOOT-02 | Phone number clickable (starts a call) | ☑ Done | ☑ Tested | `tel:+443300433245` as 0330 043 3245 for Phone; `wa.me/447848476375` as 07848 476375 for WhatsApp on all 11 pages then Contact cards; v2 Q1 answered |
-| FOOT-03 | Bottom bar text: "© 2026 ARCHINOVA STRUCTURES LTD / All Rights Reserved. / Registered in England & Wales \| Company No. 17343941" | ≈ Ours | ☑ Tested | Fixed year 2026 + legalese on the bottom bar of all 11 pages — our call: fixed year as supplied, not auto-updating |
-| FOOT-04 | Remove "Registered in England & Wales" from the footer brand column | ≈ Ours | ☑ Tested | Registration line removed from the brand column; kept only on the bottom bar — our call: resolves the brief asking to both add and remove the line |
+| FOOT-03 | Bottom bar text: "© 2026 ARCHINOVA STRUCTURES LTD / All Rights Reserved. / Registered in England & Wales \| Company No. 17343941" | ≈ Ours | ☑ Tested | Client asked to drop the registration line from the bottom bar; now © 2026 ARCHINOVA STRUCTURES LTD. All Rights Reserved. only — fixed year kept |
+| FOOT-04 | Remove "Registered in England & Wales" from the footer brand column | ≈ Ours | ☑ Tested | Registration line removed from the brand column and later from the bottom bar as well — our call then client follow-up |
 
 ---
 

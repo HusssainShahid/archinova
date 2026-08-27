@@ -85,9 +85,7 @@ const footer = (r) => `<footer class="site-footer site-footer--lg">
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 ARCHINOVA STRUCTURES LTD. All Rights Reserved.
-          <span class="footer-legalese">Registered in England &amp; Wales | Company No. 17343941</span>
-        </span>
+        <span>&copy; 2026 ARCHINOVA STRUCTURES LTD. All Rights Reserved.</span>
         <div class="footer-legal">
           <a href="${r}privacy.html">Privacy Policy</a>
           <a href="${r}cookies.html">Cookie Policy</a>
