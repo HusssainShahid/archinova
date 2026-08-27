@@ -65,9 +65,9 @@ separate series.
 and company-registration copy says **"England & Wales"**. This split is intentional and is
 itself an open question (v2 Q3) — do not "fix" one to match the other.
 
-**Placeholder phone number is deliberate.** `+44 XX XXXX XXXX` / `tel:+44XXXXXXXXXX` /
-`wa.me/44XXXXXXXXXX` appear sitewide via `apply-shell.mjs`. The markup is complete; the
-number is fake so it cannot ship unnoticed (v2 Q1). Don't invent one.
+**Phone and WhatsApp** live in `tools/apply-shell.mjs` (`PHONE_DISPLAY`, `PHONE_HREF`,
+`WHATSAPP_HREF`) plus the Contact cards. Current landline is `0330 043 3245`
+(`tel:+443300433245`, `wa.me/443300433245`). Do not revert to the old placeholder.
 
 **Forms post to Web3Forms.** `js/main.js` → `initEnquiryForms()` handles any element with
 `data-enquiry-form`. Two forms use it: Contact, and "Request a Quote" on About. A live

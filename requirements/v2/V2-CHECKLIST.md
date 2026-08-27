@@ -135,7 +135,7 @@ by side against the original brief.
 | ID | Requirement | Done | Tested | Evidence / Notes |
 |---|---|---|---|---|
 | FOOT-01 | Email address clickable (opens mail) | ☑ Done | ☑ Tested | `mailto:` present on all 11 pages |
-| FOOT-02 | Phone number clickable (starts a call) | ≈ Q1 | ☑ Tested | `tel:` + `wa.me` wired with placeholder `+44 XX XXXX XXXX` until the real number arrives |
+| FOOT-02 | Phone number clickable (starts a call) | ☑ Done | ☑ Tested | `tel:+443300433245` and `wa.me/443300433245` live as 0330 043 3245 on all 11 pages then Contact cards; v2 Q1 answered |
 | FOOT-03 | Bottom bar text: "© 2026 ARCHINOVA STRUCTURES LTD / All Rights Reserved. / Registered in England & Wales \| Company No. 17343941" | ≈ Ours | ☑ Tested | Fixed year 2026 + legalese on the bottom bar of all 11 pages — our call: fixed year as supplied, not auto-updating |
 | FOOT-04 | Remove "Registered in England & Wales" from the footer brand column | ≈ Ours | ☑ Tested | Registration line removed from the brand column; kept only on the bottom bar — our call: resolves the brief asking to both add and remove the line |
 
@@ -224,7 +224,7 @@ by side against the original brief.
 
 | ID | Requirement | Done | Tested | Evidence / Notes |
 |---|---|---|---|---|
-| ABT-32 | Footer "Get In Touch": add phone | ≈ Q1 | ☑ Tested | Phone + WhatsApp in the shared footer (placeholder number) |
+| ABT-32 | Footer "Get In Touch": add phone | ☑ Done | ☑ Tested | Phone + WhatsApp in the shared footer as 0330 043 3245 (v2 Q1 answered) |
 | ABT-33 | Remove the "Ready to Work With Us" section | ☑ Done | ☑ Tested | 0 hits for "Ready to Work With Us" |
 | ABT-34 | Remove the blue details section below it | ☑ Done | ☑ Tested | Company details block below CTA removed |
 | ABT-35 | Leave the Privacy section as it is | ≈ Ours | N/A | No Privacy section exists on this page — nothing to leave — our call: no Privacy section exists on this page, so treated as a no-op |
@@ -560,7 +560,7 @@ by side against the original brief.
 | VER-04 | No broken internal links across all 10 pages | ☑ Done | ☑ Tested | `tools/verify.mjs`: 0 broken internal links |
 | VER-05 | No 404ing images across all 10 pages | ☑ Done | ☑ Tested | `tools/verify.mjs` + Playwright image check: 0 broken images |
 | VER-06 | Navbar and footer identical on all 10 pages | ☑ Done | ☑ Tested | Applied via `tools/apply-shell.mjs`; identical markup on all 11 pages |
-| VER-07 | No remaining `+44 XX XXXX XXXX` placeholders | ≈ Q1 | ☐ | Placeholders remain until the client supplies the real number |
+| VER-07 | No remaining `+44 XX XXXX XXXX` placeholders | ☑ Done | ☑ Tested | Landline 0330 043 3245 live; `verify.mjs` asserts the real tel and wa.me and fails if the old placeholder returns |
 | VER-08 | Every `🔒` and `≈` row above resolved with the client | ☐ | ☐ | Awaiting client answers in `V2-QUESTIONS.md` — every assumption is marked `≈ Qn` above |
 
 ---

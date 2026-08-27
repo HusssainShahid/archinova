@@ -69,11 +69,10 @@ not be re-run.
 
 ## Known gaps
 
-- **Phone and WhatsApp numbers are deliberate placeholders** (`+44 XX XXXX XXXX`,
-  `tel:+44XXXXXXXXXX`, `wa.me/44XXXXXXXXXX`). The markup is finished; only the number is
-  missing. Blocks launch — see `requirements/v2/V2-QUESTIONS.md` Q1.
 - **Enquiry forms post to Web3Forms** (Contact, and "Request a Quote" on About). The access
-  key in `js/main.js` is live. See `requirements/v2/V2-QUESTIONS.md` Q2 for the
+  key in `js/main.js` is live and currently delivers to the inbox that created that key.
+  Point it at `info@archinovastructures.co.uk` before launch (create a new key on that
+  mailbox, then replace `WEB3FORMS_KEY`). See `requirements/v2/V2-QUESTIONS.md` Q2 for the
   privacy-policy follow-up (naming Web3Forms as a processor) still awaiting client wording
   or go-ahead.
 - **Neither form accepts file attachments.** Both offer a "Link to Drawings or Documents"

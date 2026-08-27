@@ -33,9 +33,8 @@
   }
 
   // Web3Forms relays each submission to the inbox its access key belongs to.
-  // The key below is a deliberate placeholder (requirements/v2/V2-QUESTIONS.md Q2): until it is
-  // replaced with a real one the forms keep the older mailto: behaviour, so the
-  // site is never worse off than before but also cannot post into a void.
+  // If the key ever starts with REPLACE-WITH again, both forms fall back to
+  // mailto: so they never post into a void. The key is public by design.
   var WEB3FORMS_KEY = "dec27af9-4490-4cce-a17c-ca91fcfada92";
   var WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
   var ENQUIRY_EMAIL = "info@archinovastructures.co.uk";

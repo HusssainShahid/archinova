@@ -16,10 +16,12 @@ const PAGES = [
   "services/surveys.html",
 ];
 
-// Placeholders until the client supplies the real numbers (requirements/v2/V2-QUESTIONS.md Q1).
-const PHONE_DISPLAY = "+44 XX XXXX XXXX";
-const PHONE_HREF = "tel:+44XXXXXXXXXX";
-const WHATSAPP_HREF = "https://wa.me/44XXXXXXXXXX";
+// Landline supplied by the client (requirements/v2/V2-QUESTIONS.md Q1). Same number for
+// WhatsApp until a separate mobile is provided; WhatsApp only works if this line is
+// registered on WhatsApp Business.
+const PHONE_DISPLAY = "0330 043 3245";
+const PHONE_HREF = "tel:+443300433245";
+const WHATSAPP_HREF = "https://wa.me/443300433245";
 const EMAIL = "info@archinovastructures.co.uk";
 
 const navbar = (r) => `<nav class="navbar navbar-expand-lg site-navbar sticky-top">
