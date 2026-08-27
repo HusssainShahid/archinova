@@ -43,7 +43,7 @@ const assertions = [
   ["nav links centred", (h) => h.includes('navbar-nav mx-auto')],
   ["email is a mailto link", (h) => h.includes('href="mailto:info@archinovastructures.co.uk"')],
   ["phone is a tel link", (h) => h.includes('href="tel:+443300433245"')],
-  ["whatsapp is a wa.me link", (h) => h.includes("https://wa.me/443300433245")],
+  ["whatsapp is a wa.me link", (h) => h.includes("https://wa.me/447848476375")],
   ["no placeholder phone number", (h) => !h.includes("+44 XX XXXX XXXX") && !h.includes("tel:+44XXXXXXXXXX")],
   ["bottom bar legalese", (h) => h.includes("Registered in England &amp; Wales | Company No. 17343941")],
   ["no registration line in footer brand column", (h) => !h.includes("Registered in England &amp; Wales<br>Company Registration No. 17343941")],

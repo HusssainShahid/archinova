@@ -16,12 +16,11 @@ const PAGES = [
   "services/surveys.html",
 ];
 
-// Landline supplied by the client (requirements/v2/V2-QUESTIONS.md Q1). Same number for
-// WhatsApp until a separate mobile is provided; WhatsApp only works if this line is
-// registered on WhatsApp Business.
+// Landline for Phone; separate mobile for WhatsApp (client-supplied).
 const PHONE_DISPLAY = "0330 043 3245";
 const PHONE_HREF = "tel:+443300433245";
-const WHATSAPP_HREF = "https://wa.me/443300433245";
+const WHATSAPP_DISPLAY = "07848 476375";
+const WHATSAPP_HREF = "https://wa.me/447848476375";
 const EMAIL = "info@archinovastructures.co.uk";
 
 const navbar = (r) => `<nav class="navbar navbar-expand-lg site-navbar sticky-top">
@@ -81,7 +80,7 @@ const footer = (r) => `<footer class="site-footer site-footer--lg">
           <ul>
             <li><a href="mailto:${EMAIL}">${EMAIL}</a></li>
             <li>Phone: <a href="${PHONE_HREF}">${PHONE_DISPLAY}</a></li>
-            <li>WhatsApp: <a href="${WHATSAPP_HREF}" target="_blank" rel="noopener">${PHONE_DISPLAY}</a></li>
+            <li>WhatsApp: <a href="${WHATSAPP_HREF}" target="_blank" rel="noopener">${WHATSAPP_DISPLAY}</a></li>
           </ul>
         </div>
       </div>
