@@ -17,8 +17,8 @@ const PAGES = [
 ];
 
 // Landline for Phone; separate mobile for WhatsApp (client-supplied).
-const PHONE_DISPLAY = "0330 043 3245";
-const PHONE_HREF = "tel:+443300433245";
+const PHONE_DISPLAY = "03305202795";
+const PHONE_HREF = "tel:03305202795";
 const WHATSAPP_DISPLAY = "07848 476375";
 const WHATSAPP_HREF = "https://wa.me/447848476375";
 const EMAIL = "info@archinovastructures.co.uk";

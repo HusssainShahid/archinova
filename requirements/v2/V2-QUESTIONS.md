@@ -38,7 +38,7 @@ Please provide:
 - Number for the **`tel:` link** (international format, e.g. `+441234567890`):
 - Number for the **WhatsApp link** (`wa.me` format, e.g. `447123456789`):
 
-**Answer:** Landline `03300433245`, shown as `0330 043 3245` (`tel:+443300433245`) for
+**Answer:** Landline `03305202795`, shown as `03305202795` (`tel:03305202795`) for
 Phone. Separate WhatsApp mobile `07848476375`, shown as `07848 476375`
 (`wa.me/447848476375`). Live on every footer and the Contact cards.
 

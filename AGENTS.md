@@ -67,7 +67,7 @@ itself an open question (v2 Q3) — do not "fix" one to match the other.
 
 **Phone and WhatsApp** live in `tools/apply-shell.mjs` (`PHONE_DISPLAY`, `PHONE_HREF`,
 `WHATSAPP_DISPLAY`, `WHATSAPP_HREF`) plus the Contact cards. Phone landline is
-`0330 043 3245` (`tel:+443300433245`). WhatsApp is mobile `07848 476375`
+`03305202795` (`tel:03305202795`). WhatsApp is mobile `07848 476375`
 (`wa.me/447848476375`). Do not revert to the old placeholder.
 
 **Forms post to Web3Forms.** `js/main.js` → `initEnquiryForms()` handles any element with
